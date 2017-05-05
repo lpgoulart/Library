@@ -7,40 +7,57 @@
 #include "headers.hpp"
 #include "book.hpp"
 
+//--------------------------------------------------------------------------------------------------------------------------
+//	Constructor & Destructor
+//--------------------------------------------------------------------------------------------------------------------------
+	
+	Book::Book () {
+
+	}
+
+	Book::~Book () {
+
+	}
+
+//--------------------------------------------------------------------------------------------------------------------------
+//	End of Constructor & Destructor
+//--------------------------------------------------------------------------------------------------------------------------
+
+
 
 //--------------------------------------------------------------------------------------------------------------------------
 //	Getters & Setters
 //--------------------------------------------------------------------------------------------------------------------------
 
-	void setTitle () {
+	void Book::setTitle () {
 		std::getline( std::cin, this->Title );
 	}
 
-	std::string getTitle () {
+	std::string Book::getTitle () {
 		return this->Title;
 	}
 
-	void setAuthor () {
+	void Book::setAuthor () {
 		std::getline( std::cin, this->Author );
 	}
 
-	std::string getAuthor () {
+	std::string Book::getAuthor () {
 		return this->Author;
 	}
 
-	void setEditor () {
+	void Book::setEditor () {
 		std::getline( std::cin, this->Editor );
 	}
 
-	std::string getEditor () {
+	std::string Book::getEditor () {
 		return this->Editor;
 	}
 
-	void setYear () {
+	void Book::setYear () {
 		std::cin >> this->Year;
 	}
 
-	int getYear () {
+	int Book::getYear () {
 		return this->Year;
 	}
 

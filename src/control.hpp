@@ -4,29 +4,12 @@
 *	@author Project to Programmig Language 1
 */
 
-#ifndef _STUDENT_HPP_
-#define _STUDENT_HPP_
+#ifndef _CONTROL_HPP_
+#define _CONTROL_HPP_
 
-#include "headers.hpp"
+#include "heanders.hpp"
 
-class Student {
-
-private:
-	
-	/**
-	*	@brief student name
-	*/
-	std::string Name;
-
-	/**
-	*	@brief student adress
-	*/
-	std::string Adress;
-
-	/**
-	*	@brief student ID
-	*/
-	int ID;
+class Control {
 
 public:
 
@@ -37,56 +20,41 @@ public:
 		/**
 		*	@brief Constructor
 		*/
-		Student::Student ();
+		Control();
+
 
 		/**
 		*	@brief Destructor
 		*/
-		Student::~Student ();
+		~Control();
+
 
 	//--------------------------------------------------------------------------------------------------------------------------
 	//	End of Constructor & Destructor
 	//--------------------------------------------------------------------------------------------------------------------------
 
 	//--------------------------------------------------------------------------------------------------------------------------
-	//	Getters & Setters
+	//	
 	//--------------------------------------------------------------------------------------------------------------------------
 
-	/**
-	*	@brief Set the student's name
-	*/
-	void setName ();
+		/**
+		*	@brief Set the book Unavailable for loans 
+		*/
+		void Loan ( Student* , Book* );
 
-	/**
-	*	@brief Get the student's name
-	*/
-	std::string getName ();
+		/**
+		*	@brief Set the book Available for loans 
+		*/
+		void Devolution ( Student* , Book* );
 
-	/**
-	*	@brief Set the student's adress
-	*/
-	void setAdress ();
+		
 
-	/**
-	*	@brief Get the student's adress
-	*/
-	std::string getAdress ();
 
-	/**
-	*	@brief Set the student's ID
-	*/
-	void setID ();
-
-	/**
-	*	@brief Get the student's ID
-	*/
-	int getID ();
 
 	//--------------------------------------------------------------------------------------------------------------------------
-	//	End of Gettters & Setters
+	//	
 	//--------------------------------------------------------------------------------------------------------------------------
 
-
-}
+};
 
 #endif

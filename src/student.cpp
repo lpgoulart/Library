@@ -8,30 +8,46 @@
 #include "student.hpp"
 
 //--------------------------------------------------------------------------------------------------------------------------
+//	Constructor & Destructor
+//--------------------------------------------------------------------------------------------------------------------------
+	
+	Student::Student () {
+
+	}
+
+	Student::~Student () {
+
+	}
+
+//--------------------------------------------------------------------------------------------------------------------------
+//	End of Constructor & Destructor
+//--------------------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------------------
 //	Getters & Setters
 //--------------------------------------------------------------------------------------------------------------------------
 
-	void setName () {
+	void Student::setName () {
 		std::getline( std::cin, this->Name );
 	}
 
-	std::string getName () {
+	std::string Student::getName () {
 		return this->name
 	}
 
-	void setAdress () {
+	void Student::setAdress () {
 		std::getline( std::cin, this->Adress );	
 	}
 
-	std::string getAdress () {
+	std::string Student::getAdress () {
 		return this->Adress;
 	}
 
-	void setID () {
+	void Student::setID () {
 		std::cin >> this->ID;
 	}
 
-	int getID () {
+	int Student::getID () {
 		return this->ID
 	}
 
