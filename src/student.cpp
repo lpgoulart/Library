@@ -32,7 +32,7 @@
 	}
 
 	std::string Student::getName () {
-		return this->name
+		return this->Name;
 	}
 
 	void Student::setAdress () {
@@ -48,7 +48,7 @@
 	}
 
 	int Student::getID () {
-		return this->ID
+		return this->ID;
 	}
 
 //--------------------------------------------------------------------------------------------------------------------------

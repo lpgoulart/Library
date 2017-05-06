@@ -7,7 +7,7 @@
 #ifndef _CONTROL_HPP_
 #define _CONTROL_HPP_
 
-#include "heanders.hpp"
+#include "headers.hpp"
 
 class Control {
 
@@ -40,14 +40,14 @@ public:
 		/**
 		*	@brief Set the book Unavailable for loans 
 		*/
-		void Loan ( Student* , Book* );
+		//void Loan ( Student* , Book* );
 
 		/**
 		*	@brief Set the book Available for loans 
 		*/
-		void Devolution ( Student* , Book* );
+		//void Devolution ( Student* , Book* );
 
-		
+
 
 
 

@@ -7,3 +7,9 @@
 #include "headers.hpp"
 #include "student.hpp"
 #include "book.hpp"
+
+int main () {
+
+
+	return 0;
+}
