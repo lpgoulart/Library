@@ -4,13 +4,13 @@
 *	@author Project to Programmig Language 1
 */
 
-#include "control.hpp"
-
+#include "../libs/control.hpp"
+#include "../libs/headers.hpp"
 	
 Control::Control () {
 
 }
 
 Control::~Control () {
-	
+
 }

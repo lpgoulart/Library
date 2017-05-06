@@ -6,5 +6,11 @@ digraph "/home/lpgoulart/UFRN/2017.1/LP_1/Projects/Library/src/control.cpp"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="control.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$control_8hpp.html"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="heanders.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 [label="headers.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$headers_8hpp.html"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }

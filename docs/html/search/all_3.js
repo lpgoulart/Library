@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['devolution',['Devolution',['../classControl.html#ad908e09fedd730c8657acb89ed488a47',1,'Control']]]
+  ['editor',['Editor',['../classBook.html#a18602b69a54cf1533569ac857681b03f',1,'Book']]]
 ];

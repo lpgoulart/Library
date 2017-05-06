@@ -4,9 +4,9 @@
 *	@author Project to Programmig Language 1
 */
 
-#include "headers.hpp"
-#include "student.hpp"
-#include "book.hpp"
+#include "../libs/headers.hpp"
+#include "../libs/student.hpp"
+#include "../libs/book.hpp"
 
 int main () {
 

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['makefile',['Makefile',['../Makefile.html',1,'']]]
+  ['name',['Name',['../classStudent.html#a914e02c29156e1a3b1b51cad6bbc9083',1,'Student']]]
 ];

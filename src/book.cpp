@@ -4,8 +4,8 @@
 *	@author Project to Programmig Language 1
 */
 
-#include "headers.hpp"
-#include "book.hpp"
+#include "../libs/headers.hpp"
+#include "../libs/book.hpp"
 
 //--------------------------------------------------------------------------------------------------------------------------
 //	Constructor & Destructor
