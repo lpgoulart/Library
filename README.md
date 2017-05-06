@@ -1,4 +1,4 @@
-# Frog Race
+# Library
 
 /..        TO DO         ../, writen in C++ on Programmig Language 1 grade at the IT Bachelor degree - UFRN
 
