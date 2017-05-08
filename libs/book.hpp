@@ -33,6 +33,12 @@ private:
 	*/
 	std::string Year;
 
+	/**
+	*	@brief name of the student who take the book
+	*/
+	std::string Student;
+
+
 public:
 
 	//--------------------------------------------------------------------------------------------------------------------------
@@ -96,6 +102,17 @@ public:
 	*	@brief Get the year of release
 	*/
 	std::string getYear ();
+
+	/**
+	*	@brief Set the student that take the book
+	*/
+	void setStudent ( std::string );
+
+	/**
+	*	@brief Get the student who take the book
+	*/
+	std::string getStudent ();
+
 
 	//--------------------------------------------------------------------------------------------------------------------------
 	//	End of Getters & Setters

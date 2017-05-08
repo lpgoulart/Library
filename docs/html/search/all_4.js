@@ -5,6 +5,7 @@ var searchData=
   ['geteditor',['getEditor',['../classBook.html#a8df0e201c23d298f20bc4f36f74ac728',1,'Book']]],
   ['getid',['getID',['../classStudent.html#ad9ecfdedf31773046febf2ff3edf798e',1,'Student']]],
   ['getname',['getName',['../classStudent.html#a729c900a0e95c46f90668f527a72ad34',1,'Student']]],
+  ['getstudent',['getStudent',['../classBook.html#ae5e61d969f34faf755921a397bdfaf20',1,'Book']]],
   ['gettitle',['getTitle',['../classBook.html#a285c04c195e3e1f11d465b07357308a7',1,'Book']]],
   ['getyear',['getYear',['../classBook.html#a933b321fec5c6c8bbe39e9d2c0b3de2d',1,'Book']]]
 ];

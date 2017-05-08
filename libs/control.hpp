@@ -38,14 +38,14 @@ public:
 	//--------------------------------------------------------------------------------------------------------------------------
 
 		/**
-		*	@brief Set the book Unavailable for loans 
+		*	@brief Search for books in the system
 		*/
-		void Loan ();
+		void searchBook ();
 
 		/**
 		*	@brief Set the book Available for loans 
 		*/
-		//void Devolution ( Student* , Book* );
+		//void Devolution ();
 
 
 

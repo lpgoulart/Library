@@ -29,7 +29,7 @@
 //	Functions
 //--------------------------------------------------------------------------------------------------------------------------
 
-	void Control::Loan () {
+	void Control::searchBook () {
 
 		Book book;
 
@@ -49,6 +49,9 @@
 				if( bookTitle == Title ) {
 					std::cout << "Book founded\n\n";
 					book.setTitle ( bookTitle );
+
+						std::getline ( myFile, str );					
+
 						std::getline ( myFile, str );
 					book.setAuthor( str );
 
@@ -64,25 +67,17 @@
 			if ( myFile.eof() == true ) {
 					std::cout << "Book not founded\n";
 				}
+			else {
 
-			/*
-				book->setTitle( bookTitle );
-				 std::getline ( myFile, str ); 
-				book->setAuthor( str );
-				 std::getline ( myFile, str ); 
-				book->setEditor( str );
-				 std::getline ( myFile, str ); 
-				book->setYear( str );
-				*/
+				std::cout << book.getTitle() << std::endl;
+				std::cout << book.getAuthor() << std::endl;
+				std::cout << book.getEditor() << std::endl;
+				std::cout << book.getYear() << std::endl;
+			}
 		}
 		else {
 			std::cout << "\nFile is not open\n";
 		}
-
-		std::cout << book.getTitle() << std::endl;
-		std::cout << book.getAuthor() << std::endl;
-		std::cout << book.getEditor() << std::endl;
-		std::cout << book.getYear() << std::endl;
 
 	}
 

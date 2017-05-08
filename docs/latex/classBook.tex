@@ -26,7 +26,11 @@ std\+::string \hyperlink{classBook_a8df0e201c23d298f20bc4f36f74ac728}{get\+Edito
 void \hyperlink{classBook_a3383a947b8522adc83e16afecba914be}{set\+Year} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the year of the book. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a933b321fec5c6c8bbe39e9d2c0b3de2d}{get\+Year} ()
-\begin{DoxyCompactList}\small\item\em Get the year of release. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the year of release. \end{DoxyCompactList}\item 
+void \hyperlink{classBook_a92bee3d10d8372e002684c018462dc4c}{set\+Student} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Set the student that take the book. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classBook_ae5e61d969f34faf755921a397bdfaf20}{get\+Student} ()
+\begin{DoxyCompactList}\small\item\em Get the student who take the book. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,7 +41,9 @@ std\+::string \hyperlink{classBook_a12872f571d8e7c5bfa31f4142e7848eb}{Author}
 std\+::string \hyperlink{classBook_a18602b69a54cf1533569ac857681b03f}{Editor}
 \begin{DoxyCompactList}\small\item\em book editor \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_ad3fc2c944e788d179c4d836f36662ae2}{Year}
-\begin{DoxyCompactList}\small\item\em release year of the book \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em release year of the book \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classBook_ae89daf9343a917dced86da884961ed3a}{Student}
+\begin{DoxyCompactList}\small\item\em name of the student who take the book \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -105,6 +111,17 @@ Get the author\textquotesingle{}s name.
 
 Get the editor\textquotesingle{}s name. 
 
+\index{Book@{Book}!get\+Student@{get\+Student}}
+\index{get\+Student@{get\+Student}!Book@{Book}}
+\subsubsection[{\texorpdfstring{get\+Student()}{getStudent()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::get\+Student (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_ae5e61d969f34faf755921a397bdfaf20}{}\label{classBook_ae5e61d969f34faf755921a397bdfaf20}
+
+
+Get the student who take the book. 
+
 \index{Book@{Book}!get\+Title@{get\+Title}}
 \index{get\+Title@{get\+Title}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Title()}{getTitle()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::get\+Title (
@@ -149,6 +166,17 @@ Set the author\textquotesingle{}s name.
 
 Set the editor\textquotesingle{}s name. 
 
+\index{Book@{Book}!set\+Student@{set\+Student}}
+\index{set\+Student@{set\+Student}!Book@{Book}}
+\subsubsection[{\texorpdfstring{set\+Student(std\+::string)}{setStudent(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Student (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{student}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_a92bee3d10d8372e002684c018462dc4c}{}\label{classBook_a92bee3d10d8372e002684c018462dc4c}
+
+
+Set the student that take the book. 
+
 \index{Book@{Book}!set\+Title@{set\+Title}}
 \index{set\+Title@{set\+Title}!Book@{Book}}
 \subsubsection[{\texorpdfstring{set\+Title(std\+::string)}{setTitle(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Title (
@@ -187,6 +215,13 @@ author name
 
 
 book editor 
+
+\index{Book@{Book}!Student@{Student}}
+\index{Student@{Student}!Book@{Book}}
+\subsubsection[{\texorpdfstring{Student}{Student}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::\+Student\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_ae89daf9343a917dced86da884961ed3a}{}\label{classBook_ae89daf9343a917dced86da884961ed3a}
+
+
+name of the student who take the book 
 
 \index{Book@{Book}!Title@{Title}}
 \index{Title@{Title}!Book@{Book}}
