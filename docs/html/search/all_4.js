@@ -6,5 +6,5 @@ var searchData=
   ['getid',['getID',['../classStudent.html#ad9ecfdedf31773046febf2ff3edf798e',1,'Student']]],
   ['getname',['getName',['../classStudent.html#a729c900a0e95c46f90668f527a72ad34',1,'Student']]],
   ['gettitle',['getTitle',['../classBook.html#a285c04c195e3e1f11d465b07357308a7',1,'Book']]],
-  ['getyear',['getYear',['../classBook.html#a3d609e3f2eae35c284bf5ae5452c6b16',1,'Book']]]
+  ['getyear',['getYear',['../classBook.html#a933b321fec5c6c8bbe39e9d2c0b3de2d',1,'Book']]]
 ];

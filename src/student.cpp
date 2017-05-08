@@ -10,8 +10,16 @@
 //--------------------------------------------------------------------------------------------------------------------------
 //	Constructor & Destructor
 //--------------------------------------------------------------------------------------------------------------------------
-	
+
 	Student::Student () {
+
+	}
+
+	Student::Student ( std::string user, std::string college, int password ) {
+		
+		this->Name = user;
+		this->Adress = college;
+		this->ID = password;
 
 	}
 

@@ -11,21 +11,21 @@
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \hyperlink{classBook_a0ba8eceb34ea1301bc08942e37824767}{$\sim$\+Book} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-void \hyperlink{classBook_adb55401b37ebe51a064ea211db2b0007}{set\+Title} ()
+void \hyperlink{classBook_af21eb2bd1abab3e7908fb4610d770b08}{set\+Title} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the book title. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a285c04c195e3e1f11d465b07357308a7}{get\+Title} ()
 \begin{DoxyCompactList}\small\item\em Get the book\textquotesingle{}s title. \end{DoxyCompactList}\item 
-void \hyperlink{classBook_af9f19cac8c898e9d6c3286b2ef0c142e}{set\+Author} ()
+void \hyperlink{classBook_a8e1a623d5795141facc30a6d298f3c75}{set\+Author} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the author\textquotesingle{}s name. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a7e8ae0106c07e4208d4b8640bc6af7f7}{get\+Author} ()
 \begin{DoxyCompactList}\small\item\em Get the author\textquotesingle{}s name. \end{DoxyCompactList}\item 
-void \hyperlink{classBook_a5c2b3a257a1d11809cf25b2322d90292}{set\+Editor} ()
+void \hyperlink{classBook_a463af516921d49d46b730c455b2de0c3}{set\+Editor} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the editor\textquotesingle{}s name. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a8df0e201c23d298f20bc4f36f74ac728}{get\+Editor} ()
 \begin{DoxyCompactList}\small\item\em Get the editor\textquotesingle{}s name. \end{DoxyCompactList}\item 
-void \hyperlink{classBook_a6d170fe59256a7d78529211748851c85}{set\+Year} ()
+void \hyperlink{classBook_a3383a947b8522adc83e16afecba914be}{set\+Year} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the year of the book. \end{DoxyCompactList}\item 
-int \hyperlink{classBook_a3d609e3f2eae35c284bf5ae5452c6b16}{get\+Year} ()
+std\+::string \hyperlink{classBook_a933b321fec5c6c8bbe39e9d2c0b3de2d}{get\+Year} ()
 \begin{DoxyCompactList}\small\item\em Get the year of release. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -36,7 +36,7 @@ std\+::string \hyperlink{classBook_a12872f571d8e7c5bfa31f4142e7848eb}{Author}
 \begin{DoxyCompactList}\small\item\em author name \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a18602b69a54cf1533569ac857681b03f}{Editor}
 \begin{DoxyCompactList}\small\item\em book editor \end{DoxyCompactList}\item 
-int \hyperlink{classBook_aeb2be9352a4120194a829c9349ddcee5}{Year}
+std\+::string \hyperlink{classBook_ad3fc2c944e788d179c4d836f36662ae2}{Year}
 \begin{DoxyCompactList}\small\item\em release year of the book \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -118,55 +118,55 @@ Get the book\textquotesingle{}s title.
 
 \index{Book@{Book}!get\+Year@{get\+Year}}
 \index{get\+Year@{get\+Year}!Book@{Book}}
-\subsubsection[{\texorpdfstring{get\+Year()}{getYear()}}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::get\+Year (
+\subsubsection[{\texorpdfstring{get\+Year()}{getYear()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::get\+Year (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classBook_a3d609e3f2eae35c284bf5ae5452c6b16}{}\label{classBook_a3d609e3f2eae35c284bf5ae5452c6b16}
+)}\hypertarget{classBook_a933b321fec5c6c8bbe39e9d2c0b3de2d}{}\label{classBook_a933b321fec5c6c8bbe39e9d2c0b3de2d}
 
 
 Get the year of release. 
 
 \index{Book@{Book}!set\+Author@{set\+Author}}
 \index{set\+Author@{set\+Author}!Book@{Book}}
-\subsubsection[{\texorpdfstring{set\+Author()}{setAuthor()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Author (
+\subsubsection[{\texorpdfstring{set\+Author(std\+::string)}{setAuthor(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Author (
 \begin{DoxyParamCaption}
-{}
+\item[{std\+::string}]{author}
 \end{DoxyParamCaption}
-)}\hypertarget{classBook_af9f19cac8c898e9d6c3286b2ef0c142e}{}\label{classBook_af9f19cac8c898e9d6c3286b2ef0c142e}
+)}\hypertarget{classBook_a8e1a623d5795141facc30a6d298f3c75}{}\label{classBook_a8e1a623d5795141facc30a6d298f3c75}
 
 
 Set the author\textquotesingle{}s name. 
 
 \index{Book@{Book}!set\+Editor@{set\+Editor}}
 \index{set\+Editor@{set\+Editor}!Book@{Book}}
-\subsubsection[{\texorpdfstring{set\+Editor()}{setEditor()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Editor (
+\subsubsection[{\texorpdfstring{set\+Editor(std\+::string)}{setEditor(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Editor (
 \begin{DoxyParamCaption}
-{}
+\item[{std\+::string}]{editor}
 \end{DoxyParamCaption}
-)}\hypertarget{classBook_a5c2b3a257a1d11809cf25b2322d90292}{}\label{classBook_a5c2b3a257a1d11809cf25b2322d90292}
+)}\hypertarget{classBook_a463af516921d49d46b730c455b2de0c3}{}\label{classBook_a463af516921d49d46b730c455b2de0c3}
 
 
 Set the editor\textquotesingle{}s name. 
 
 \index{Book@{Book}!set\+Title@{set\+Title}}
 \index{set\+Title@{set\+Title}!Book@{Book}}
-\subsubsection[{\texorpdfstring{set\+Title()}{setTitle()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Title (
+\subsubsection[{\texorpdfstring{set\+Title(std\+::string)}{setTitle(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Title (
 \begin{DoxyParamCaption}
-{}
+\item[{std\+::string}]{title}
 \end{DoxyParamCaption}
-)}\hypertarget{classBook_adb55401b37ebe51a064ea211db2b0007}{}\label{classBook_adb55401b37ebe51a064ea211db2b0007}
+)}\hypertarget{classBook_af21eb2bd1abab3e7908fb4610d770b08}{}\label{classBook_af21eb2bd1abab3e7908fb4610d770b08}
 
 
 Set the book title. 
 
 \index{Book@{Book}!set\+Year@{set\+Year}}
 \index{set\+Year@{set\+Year}!Book@{Book}}
-\subsubsection[{\texorpdfstring{set\+Year()}{setYear()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Year (
+\subsubsection[{\texorpdfstring{set\+Year(std\+::string)}{setYear(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Year (
 \begin{DoxyParamCaption}
-{}
+\item[{std\+::string}]{year}
 \end{DoxyParamCaption}
-)}\hypertarget{classBook_a6d170fe59256a7d78529211748851c85}{}\label{classBook_a6d170fe59256a7d78529211748851c85}
+)}\hypertarget{classBook_a3383a947b8522adc83e16afecba914be}{}\label{classBook_a3383a947b8522adc83e16afecba914be}
 
 
 Set the year of the book. 
@@ -197,7 +197,7 @@ book title
 
 \index{Book@{Book}!Year@{Year}}
 \index{Year@{Year}!Book@{Book}}
-\subsubsection[{\texorpdfstring{Year}{Year}}]{\setlength{\rightskip}{0pt plus 5cm}int Book\+::\+Year\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_aeb2be9352a4120194a829c9349ddcee5}{}\label{classBook_aeb2be9352a4120194a829c9349ddcee5}
+\subsubsection[{\texorpdfstring{Year}{Year}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::\+Year\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_ad3fc2c944e788d179c4d836f36662ae2}{}\label{classBook_ad3fc2c944e788d179c4d836f36662ae2}
 
 
 release year of the book 
@@ -206,5 +206,5 @@ release year of the book
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/lpgoulart/\+U\+F\+R\+N/2017.\+1/\+L\+P\+\_\+1/\+Projects/\+Library/src/\hyperlink{book_8hpp}{book.\+hpp}\item 
+/home/lpgoulart/\+U\+F\+R\+N/2017.\+1/\+L\+P\+\_\+1/\+Projects/\+Library/libs/\hyperlink{book_8hpp}{book.\+hpp}\item 
 /home/lpgoulart/\+U\+F\+R\+N/2017.\+1/\+L\+P\+\_\+1/\+Projects/\+Library/src/\hyperlink{book_8cpp}{book.\+cpp}\end{DoxyCompactItemize}

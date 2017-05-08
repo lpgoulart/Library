@@ -40,6 +40,11 @@ public:
 		Student ();
 
 		/**
+		*	@brief Construct overload
+		*/
+		Student ( std::string, std::string, int );
+
+		/**
 		*	@brief Destructor
 		*/
 		~Student ();

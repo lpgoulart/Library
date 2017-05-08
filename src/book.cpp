@@ -29,35 +29,35 @@
 //	Getters & Setters
 //--------------------------------------------------------------------------------------------------------------------------
 
-	void Book::setTitle () {
-		std::getline( std::cin, this->Title );
+	void Book::setTitle ( std::string title ) {
+		this->Title = title;
 	}
 
 	std::string Book::getTitle () {
 		return this->Title;
 	}
 
-	void Book::setAuthor () {
-		std::getline( std::cin, this->Author );
+	void Book::setAuthor ( std::string author ) {
+		this->Author = author;
 	}
 
 	std::string Book::getAuthor () {
 		return this->Author;
 	}
 
-	void Book::setEditor () {
-		std::getline( std::cin, this->Editor );
+	void Book::setEditor ( std::string editor ) {
+		this->Editor = editor;
 	}
 
 	std::string Book::getEditor () {
 		return this->Editor;
 	}
 
-	void Book::setYear () {
-		std::cin >> this->Year;
+	void Book::setYear ( std::string year ) {
+		this->Year = year;
 	}
 
-	int Book::getYear () {
+	std::string Book::getYear () {
 		return this->Year;
 	}
 

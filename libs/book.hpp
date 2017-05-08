@@ -31,7 +31,7 @@ private:
 	/**
 	*	@brief release year of the book
 	*/
-	int Year;
+	std::string Year;
 
 public:
 
@@ -60,7 +60,7 @@ public:
 	/**
 	*	@brief Set the book title
 	*/
-	void setTitle ();
+	void setTitle ( std::string );
 
 	/**
 	*	@brief Get the book's title
@@ -70,7 +70,7 @@ public:
 	/**
 	*	@brief Set the author's name
 	*/
-	void setAuthor ();
+	void setAuthor ( std::string );
 
 	/**
 	*	@brief Get the author's name
@@ -80,7 +80,7 @@ public:
 	/**
 	*	@brief Set the editor's name
 	*/
-	void setEditor ();
+	void setEditor ( std::string );
 
 	/**
 	*	@brief Get the editor's name
@@ -90,12 +90,12 @@ public:
 	/**
 	*	@brief Set the year of the book
 	*/
-	void setYear ();
+	void setYear ( std::string );
 
 	/**
 	*	@brief Get the year of release
 	*/
-	int getYear ();
+	std::string getYear ();
 
 	//--------------------------------------------------------------------------------------------------------------------------
 	//	End of Getters & Setters

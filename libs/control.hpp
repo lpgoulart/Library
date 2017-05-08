@@ -40,7 +40,7 @@ public:
 		/**
 		*	@brief Set the book Unavailable for loans 
 		*/
-		//void Loan ( Student* , Book* );
+		void Loan ();
 
 		/**
 		*	@brief Set the book Available for loans 
