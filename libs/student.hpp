@@ -26,7 +26,7 @@ private:
 	/**
 	*	@brief student ID
 	*/
-	int ID;
+	std::string ID;
 
 public:
 
@@ -42,7 +42,7 @@ public:
 		/**
 		*	@brief Construct overload
 		*/
-		Student ( std::string, std::string, int );
+		Student ( std::string, std::string, std::string );
 
 		/**
 		*	@brief Destructor
@@ -59,33 +59,39 @@ public:
 
 	/**
 	*	@brief Set the student's name
+	*	@param name of the student 
 	*/
-	void setName ();
+	void setName ( std::string );
 
 	/**
 	*	@brief Get the student's name
+	*	@return name of the student
 	*/
 	std::string getName ();
 
 	/**
 	*	@brief Set the student's adress
+	*	@param student adress
 	*/
-	void setAdress ();
+	void setAdress ( std::string );
 
 	/**
 	*	@brief Get the student's adress
+	*	@return student adress
 	*/
 	std::string getAdress ();
 
 	/**
 	*	@brief Set the student's ID
+	*	@param student ID
 	*/
-	void setID ();
+	void setID ( std::string );
 
 	/**
 	*	@brief Get the student's ID
+	*	@return student ID
 	*/
-	int getID ();
+	std::string getID ();
 
 	//--------------------------------------------------------------------------------------------------------------------------
 	//	End of Gettters & Setters

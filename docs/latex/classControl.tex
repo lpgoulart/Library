@@ -12,7 +12,11 @@
 \hyperlink{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}{$\sim$\+Control} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a8b6c2e30e71b54786b3ec01e8524076f}{search\+Book} ()
-\begin{DoxyCompactList}\small\item\em Search for books in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Search for books in the system. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classControl_a007b5eacf0c3e8f1f799739c74b2779e}{search\+Book} (std\+::string)
+\begin{DoxyCompactList}\small\item\em See the book borrowed by the student. \end{DoxyCompactList}\item 
+void \hyperlink{classControl_ad413782c762539562d2ff9401a54eab3}{Loans} ()
+\begin{DoxyCompactList}\small\item\em See the student loan. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -58,6 +62,17 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
+\index{Control@{Control}!Loans@{Loans}}
+\index{Loans@{Loans}!Control@{Control}}
+\subsubsection[{\texorpdfstring{Loans()}{Loans()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::\+Loans (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classControl_ad413782c762539562d2ff9401a54eab3}{}\label{classControl_ad413782c762539562d2ff9401a54eab3}
+
+
+See the student loan. 
+
 \index{Control@{Control}!search\+Book@{search\+Book}}
 \index{search\+Book@{search\+Book}!Control@{Control}}
 \subsubsection[{\texorpdfstring{search\+Book()}{searchBook()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::search\+Book (
@@ -69,6 +84,25 @@ Destructor.
 
 Search for books in the system. 
 
+\index{Control@{Control}!search\+Book@{search\+Book}}
+\index{search\+Book@{search\+Book}!Control@{Control}}
+\subsubsection[{\texorpdfstring{search\+Book(std\+::string)}{searchBook(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Control\+::search\+Book (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{bookT}
+\end{DoxyParamCaption}
+)}\hypertarget{classControl_a007b5eacf0c3e8f1f799739c74b2779e}{}\label{classControl_a007b5eacf0c3e8f1f799739c74b2779e}
+
+
+See the book borrowed by the student. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & of the book \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Name of the book founded on system 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -15,7 +15,7 @@
 
 	}
 
-	Student::Student ( std::string user, std::string college, int password ) {
+	Student::Student ( std::string user, std::string college, std::string password ) {
 		
 		this->Name = user;
 		this->Adress = college;
@@ -35,27 +35,27 @@
 //	Getters & Setters
 //--------------------------------------------------------------------------------------------------------------------------
 
-	void Student::setName () {
-		std::getline( std::cin, this->Name );
+	void Student::setName ( std::string name ) {
+		this->Name = name;
 	}
 
 	std::string Student::getName () {
 		return this->Name;
 	}
 
-	void Student::setAdress () {
-		std::getline( std::cin, this->Adress );	
+	void Student::setAdress ( std::string adress ) {
+		this->Adress = adress;	
 	}
 
 	std::string Student::getAdress () {
 		return this->Adress;
 	}
 
-	void Student::setID () {
-		std::cin >> this->ID;
+	void Student::setID ( std::string id ) {
+		this->ID = id;
 	}
 
-	int Student::getID () {
+	std::string Student::getID () {
 		return this->ID;
 	}
 

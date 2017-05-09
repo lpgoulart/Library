@@ -9,21 +9,21 @@
 \item 
 \hyperlink{classStudent_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student} ()
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\hyperlink{classStudent_ae0f9f843d8276e9cc7736c6b0118a62d}{Student} (std\+::string, std\+::string, int)
+\hyperlink{classStudent_a369e05da376d35e9fc821f3c09c01c05}{Student} (std\+::string, std\+::string, std\+::string)
 \begin{DoxyCompactList}\small\item\em Construct overload. \end{DoxyCompactList}\item 
 \hyperlink{classStudent_a54a8ea060d6cd04222c3a2f89829f105}{$\sim$\+Student} ()
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
-void \hyperlink{classStudent_a5ac76288655c66ad6585540c396bf48e}{set\+Name} ()
+void \hyperlink{classStudent_a978f009a5d80c19999f7770cd62f4088}{set\+Name} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the student\textquotesingle{}s name. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classStudent_a729c900a0e95c46f90668f527a72ad34}{get\+Name} ()
 \begin{DoxyCompactList}\small\item\em Get the student\textquotesingle{}s name. \end{DoxyCompactList}\item 
-void \hyperlink{classStudent_a4c6291d1e293459aa0ca6c6c003a9a8e}{set\+Adress} ()
+void \hyperlink{classStudent_a69ded62af3d483e4c9bf8505a58cefe5}{set\+Adress} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the student\textquotesingle{}s adress. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classStudent_aeb78f390f160a1bcad595e7487cdf881}{get\+Adress} ()
 \begin{DoxyCompactList}\small\item\em Get the student\textquotesingle{}s adress. \end{DoxyCompactList}\item 
-void \hyperlink{classStudent_ae4d074aadddc5f9715822bb8ed88f4b3}{set\+ID} ()
+void \hyperlink{classStudent_ab9bba1e271f7aebdbba115311873482a}{set\+ID} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the student\textquotesingle{}s ID. \end{DoxyCompactList}\item 
-int \hyperlink{classStudent_ad9ecfdedf31773046febf2ff3edf798e}{get\+ID} ()
+std\+::string \hyperlink{classStudent_a87fcf0ef568c017d246b559c31db5857}{get\+ID} ()
 \begin{DoxyCompactList}\small\item\em Get the student\textquotesingle{}s ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -32,7 +32,7 @@ std\+::string \hyperlink{classStudent_a914e02c29156e1a3b1b51cad6bbc9083}{Name}
 \begin{DoxyCompactList}\small\item\em student name \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classStudent_a2ce7f219072c295b7f3bc95db09625f3}{Adress}
 \begin{DoxyCompactList}\small\item\em student adress \end{DoxyCompactList}\item 
-int \hyperlink{classStudent_abb8d0bd3565b4c8ce2b37247542283b5}{ID}
+std\+::string \hyperlink{classStudent_a1ae2688ebf463a93d001465c510f8970}{ID}
 \begin{DoxyCompactList}\small\item\em student ID \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -67,13 +67,13 @@ Project to Programmig Language 1
 \end{DoxyAuthor}
 \index{Student@{Student}!Student@{Student}}
 \index{Student@{Student}!Student@{Student}}
-\subsubsection[{\texorpdfstring{Student(std\+::string, std\+::string, int)}{Student(std::string, std::string, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Student\+::\+Student (
+\subsubsection[{\texorpdfstring{Student(std\+::string, std\+::string, std\+::string)}{Student(std::string, std::string, std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}Student\+::\+Student (
 \begin{DoxyParamCaption}
 \item[{std\+::string}]{user, }
 \item[{std\+::string}]{college, }
-\item[{int}]{password}
+\item[{std\+::string}]{password}
 \end{DoxyParamCaption}
-)}\hypertarget{classStudent_ae0f9f843d8276e9cc7736c6b0118a62d}{}\label{classStudent_ae0f9f843d8276e9cc7736c6b0118a62d}
+)}\hypertarget{classStudent_a369e05da376d35e9fc821f3c09c01c05}{}\label{classStudent_a369e05da376d35e9fc821f3c09c01c05}
 
 
 Construct overload. 
@@ -103,17 +103,23 @@ Destructor.
 
 Get the student\textquotesingle{}s adress. 
 
+\begin{DoxyReturn}{Returns}
+student adress 
+\end{DoxyReturn}
 \index{Student@{Student}!get\+ID@{get\+ID}}
 \index{get\+ID@{get\+ID}!Student@{Student}}
-\subsubsection[{\texorpdfstring{get\+I\+D()}{getID()}}]{\setlength{\rightskip}{0pt plus 5cm}int Student\+::get\+ID (
+\subsubsection[{\texorpdfstring{get\+I\+D()}{getID()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Student\+::get\+ID (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classStudent_ad9ecfdedf31773046febf2ff3edf798e}{}\label{classStudent_ad9ecfdedf31773046febf2ff3edf798e}
+)}\hypertarget{classStudent_a87fcf0ef568c017d246b559c31db5857}{}\label{classStudent_a87fcf0ef568c017d246b559c31db5857}
 
 
 Get the student\textquotesingle{}s ID. 
 
+\begin{DoxyReturn}{Returns}
+student ID 
+\end{DoxyReturn}
 \index{Student@{Student}!get\+Name@{get\+Name}}
 \index{get\+Name@{get\+Name}!Student@{Student}}
 \subsubsection[{\texorpdfstring{get\+Name()}{getName()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Student\+::get\+Name (
@@ -125,39 +131,57 @@ Get the student\textquotesingle{}s ID.
 
 Get the student\textquotesingle{}s name. 
 
+\begin{DoxyReturn}{Returns}
+name of the student 
+\end{DoxyReturn}
 \index{Student@{Student}!set\+Adress@{set\+Adress}}
 \index{set\+Adress@{set\+Adress}!Student@{Student}}
-\subsubsection[{\texorpdfstring{set\+Adress()}{setAdress()}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+Adress (
+\subsubsection[{\texorpdfstring{set\+Adress(std\+::string)}{setAdress(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+Adress (
 \begin{DoxyParamCaption}
-{}
+\item[{std\+::string}]{adress}
 \end{DoxyParamCaption}
-)}\hypertarget{classStudent_a4c6291d1e293459aa0ca6c6c003a9a8e}{}\label{classStudent_a4c6291d1e293459aa0ca6c6c003a9a8e}
+)}\hypertarget{classStudent_a69ded62af3d483e4c9bf8505a58cefe5}{}\label{classStudent_a69ded62af3d483e4c9bf8505a58cefe5}
 
 
 Set the student\textquotesingle{}s adress. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em student} & adress \\
+\hline
+\end{DoxyParams}
 \index{Student@{Student}!set\+ID@{set\+ID}}
 \index{set\+ID@{set\+ID}!Student@{Student}}
-\subsubsection[{\texorpdfstring{set\+I\+D()}{setID()}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+ID (
+\subsubsection[{\texorpdfstring{set\+I\+D(std\+::string)}{setID(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+ID (
 \begin{DoxyParamCaption}
-{}
+\item[{std\+::string}]{id}
 \end{DoxyParamCaption}
-)}\hypertarget{classStudent_ae4d074aadddc5f9715822bb8ed88f4b3}{}\label{classStudent_ae4d074aadddc5f9715822bb8ed88f4b3}
+)}\hypertarget{classStudent_ab9bba1e271f7aebdbba115311873482a}{}\label{classStudent_ab9bba1e271f7aebdbba115311873482a}
 
 
 Set the student\textquotesingle{}s ID. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em student} & ID \\
+\hline
+\end{DoxyParams}
 \index{Student@{Student}!set\+Name@{set\+Name}}
 \index{set\+Name@{set\+Name}!Student@{Student}}
-\subsubsection[{\texorpdfstring{set\+Name()}{setName()}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+Name (
+\subsubsection[{\texorpdfstring{set\+Name(std\+::string)}{setName(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+Name (
 \begin{DoxyParamCaption}
-{}
+\item[{std\+::string}]{name}
 \end{DoxyParamCaption}
-)}\hypertarget{classStudent_a5ac76288655c66ad6585540c396bf48e}{}\label{classStudent_a5ac76288655c66ad6585540c396bf48e}
+)}\hypertarget{classStudent_a978f009a5d80c19999f7770cd62f4088}{}\label{classStudent_a978f009a5d80c19999f7770cd62f4088}
 
 
 Set the student\textquotesingle{}s name. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the student \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}
@@ -170,7 +194,7 @@ student adress
 
 \index{Student@{Student}!ID@{ID}}
 \index{ID@{ID}!Student@{Student}}
-\subsubsection[{\texorpdfstring{ID}{ID}}]{\setlength{\rightskip}{0pt plus 5cm}int Student\+::\+ID\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStudent_abb8d0bd3565b4c8ce2b37247542283b5}{}\label{classStudent_abb8d0bd3565b4c8ce2b37247542283b5}
+\subsubsection[{\texorpdfstring{ID}{ID}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Student\+::\+ID\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classStudent_a1ae2688ebf463a93d001465c510f8970}{}\label{classStudent_a1ae2688ebf463a93d001465c510f8970}
 
 
 student ID 

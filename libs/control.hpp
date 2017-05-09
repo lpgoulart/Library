@@ -43,9 +43,16 @@ public:
 		void searchBook ();
 
 		/**
-		*	@brief Set the book Available for loans 
+		*	@brief See the book borrowed by the student
+		*	@param Name of the book
+		*	@return Name of the book founded on system
 		*/
-		//void Devolution ();
+		std::string searchBook ( std::string );
+
+		/**
+		*	@brief See the student loan  
+		*/
+		void Loans ();
 
 
 
