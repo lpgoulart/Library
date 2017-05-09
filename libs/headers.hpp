@@ -12,5 +12,6 @@
 #include <string>
 #include <cctype>
 #include <fstream>
+#include <ctime>
 
 #endif

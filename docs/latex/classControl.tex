@@ -13,10 +13,14 @@
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a8b6c2e30e71b54786b3ec01e8524076f}{search\+Book} ()
 \begin{DoxyCompactList}\small\item\em Search for books in the system. \end{DoxyCompactList}\item 
-std\+::string \hyperlink{classControl_a007b5eacf0c3e8f1f799739c74b2779e}{search\+Book} (std\+::string)
+std\+::string \hyperlink{classControl_a7719518366f488614467555e53a6d0c2}{search\+Book} (std\+::string, std\+::string)
 \begin{DoxyCompactList}\small\item\em See the book borrowed by the student. \end{DoxyCompactList}\item 
 void \hyperlink{classControl_ad413782c762539562d2ff9401a54eab3}{Loans} ()
-\begin{DoxyCompactList}\small\item\em See the student loan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em See the student loan. \end{DoxyCompactList}\item 
+void \hyperlink{classControl_a4e5343c4033003b873eac91e72c0f8f6}{Loans} (std\+::string, std\+::string)
+\begin{DoxyCompactList}\small\item\em See the student loan. \end{DoxyCompactList}\item 
+void \hyperlink{classControl_a855e5c015aef0ed0194d184f326439e3}{Devolution} ()
+\begin{DoxyCompactList}\small\item\em Set the book available again. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -62,6 +66,17 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
+\index{Control@{Control}!Devolution@{Devolution}}
+\index{Devolution@{Devolution}!Control@{Control}}
+\subsubsection[{\texorpdfstring{Devolution()}{Devolution()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::\+Devolution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classControl_a855e5c015aef0ed0194d184f326439e3}{}\label{classControl_a855e5c015aef0ed0194d184f326439e3}
+
+
+Set the book available again. 
+
 \index{Control@{Control}!Loans@{Loans}}
 \index{Loans@{Loans}!Control@{Control}}
 \subsubsection[{\texorpdfstring{Loans()}{Loans()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::\+Loans (
@@ -73,6 +88,25 @@ Destructor.
 
 See the student loan. 
 
+\index{Control@{Control}!Loans@{Loans}}
+\index{Loans@{Loans}!Control@{Control}}
+\subsubsection[{\texorpdfstring{Loans(std\+::string, std\+::string)}{Loans(std::string, std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::\+Loans (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{std\+::string}]{title}
+\end{DoxyParamCaption}
+)}\hypertarget{classControl_a4e5343c4033003b873eac91e72c0f8f6}{}\label{classControl_a4e5343c4033003b873eac91e72c0f8f6}
+
+
+See the student loan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em student} & name \\
+\hline
+{\em book} & title \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!search\+Book@{search\+Book}}
 \index{search\+Book@{search\+Book}!Control@{Control}}
 \subsubsection[{\texorpdfstring{search\+Book()}{searchBook()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::search\+Book (
@@ -86,11 +120,12 @@ Search for books in the system.
 
 \index{Control@{Control}!search\+Book@{search\+Book}}
 \index{search\+Book@{search\+Book}!Control@{Control}}
-\subsubsection[{\texorpdfstring{search\+Book(std\+::string)}{searchBook(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Control\+::search\+Book (
+\subsubsection[{\texorpdfstring{search\+Book(std\+::string, std\+::string)}{searchBook(std::string, std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Control\+::search\+Book (
 \begin{DoxyParamCaption}
-\item[{std\+::string}]{bookT}
+\item[{std\+::string}]{bookT, }
+\item[{std\+::string}]{Name}
 \end{DoxyParamCaption}
-)}\hypertarget{classControl_a007b5eacf0c3e8f1f799739c74b2779e}{}\label{classControl_a007b5eacf0c3e8f1f799739c74b2779e}
+)}\hypertarget{classControl_a7719518366f488614467555e53a6d0c2}{}\label{classControl_a7719518366f488614467555e53a6d0c2}
 
 
 See the book borrowed by the student. 

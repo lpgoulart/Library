@@ -50,7 +50,8 @@
 					std::cout << "Book founded\n\n";
 					book.setTitle ( bookTitle );
 
-						std::getline ( myFile, str );					
+						std::getline ( myFile, str );
+					book.setStudent( str );					
 
 						std::getline ( myFile, str );
 					book.setAuthor( str );
@@ -73,6 +74,14 @@
 				std::cout << book.getAuthor() << std::endl;
 				std::cout << book.getEditor() << std::endl;
 				std::cout << book.getYear() << std::endl;
+
+				if( book.getStudent() == "Not Available" ) {
+					std::cout << "Book borrowed\n\n";
+				}
+				else {
+					std::cout << "Available\n\n";
+				}
+
 			}
 		}
 		else {
@@ -82,34 +91,65 @@
 	}
 
 
-	std::string Control::searchBook ( std::string bookT ) {
+	std::string Control::searchBook ( std::string bookT, std::string Name ) {
 
-		Book book;
 
-		std::fstream myFile;
-	    myFile.open ("../txt/books.txt", std::fstream::in | std::fstream::out);
+		std::string strReplace = "Available";
+		std::string strNew = "Not Available";
 
-		std::string bookTitle = "";
-		std::string Title = bookT;
-		std::string str;
+		std::ifstream filein( "../txt/books.txt" ); 
+    	std::ofstream fileout( "../txt/temp.txt" );
 
-		if( myFile.is_open() ) {
+    	std::string strTemp;
 
-			while( std::getline ( myFile, bookTitle ) ) {
-				if( bookTitle == Title ) {
-					return bookTitle;
-					break;
-				}
-			}	
-			if ( myFile.eof() == true ) {
-					std::cout << "Book not founded\n";
-			}
+	    while( std::getline ( filein, strTemp ) )
+	    {
 
-		}
-		else {
-			std::cout << "\nFile is not open\n";
-		}
-		return "";
+	        if( strTemp == bookT ){
+	        	strTemp += "\n";
+	        	fileout << strTemp;
+	            std::getline ( filein, strTemp );
+	            strTemp = strNew;
+	        }
+	        strTemp += "\n";
+	        fileout << strTemp;
+	    }
+	    remove ( "../txt/books.txt" );
+	    rename ( "../txt/temp.txt", "../txt/books.txt" );
+
+
+
+	    strNew = bookT;
+	    strReplace = "";
+
+	    std::ifstream fileIn( "../txt/students.txt" ); 
+    	std::ofstream fileOut( "../txt/temp.txt" );
+
+    	strTemp = "";
+
+	    while( std::getline ( fileIn, strTemp ) )
+	    {
+
+	        if( strTemp == Name ){
+	        	
+	        	strTemp += "\n";
+	        	fileOut << strTemp;
+	            std::getline ( fileIn, strTemp );
+
+	            strTemp += "\n";
+	        	fileOut << strTemp;
+	            std::getline ( fileIn, strTemp );
+	            
+	            strTemp = strNew;
+	        }
+	        strTemp += "\n";
+	        fileOut << strTemp;
+	    }
+	    remove ( "../txt/students.txt" );
+	    rename ( "../txt/temp.txt", "../txt/students.txt" );
+
+	    return bookT;
+
 	}
 
 
@@ -125,6 +165,7 @@
 	    std::string studentID = "";
 		std::string id;
 		std::string str;
+		std::string adress;
 
 		std::cout << "Enter the student ID...: " << std::endl;
 		std::getline ( std::cin, id );
@@ -141,6 +182,7 @@
 
 						std::getline ( myFile, str );
 					student.setAdress( str );
+					adress = str;
 					
 						std::getline ( myFile, str );
 					book.setTitle( str );
@@ -160,19 +202,97 @@
 				
 				if( book.getTitle() != "" ) {
 					std::cout << "\nBook borrowed by the student: ";
-					std::cout << control.searchBook( book.getTitle() ) << std::endl;
+					std::cout << book.getTitle() << std::endl;
 				} 
 				else {
-					std::cout << "\nNo book borrow...\n";
-				}
-
+					std::cout << "\nBorrow book: ";
+					std::getline ( std::cin, str );
+					control.searchBook ( str, student.getName() );
 			}
 		}
-		else {
-			std::cout << "\nFile is not open\n";
-		}
+	} 
+	else {
+		std::cout << "\nFile is not open\n";
+	}
+}
 
 
+	void Control::Loans ( std::string name, std::string title ) {
+
+		std::string strReplace = "Not Available";
+		std::string strNew = "Available";
+
+		std::ifstream filein( "../txt/books.txt" ); 
+    	std::ofstream fileout( "../txt/temp.txt" );
+
+    	std::string strTemp;
+
+	    while( std::getline ( filein, strTemp ) )
+	    {
+
+	        if( strTemp == title ){
+	        	strTemp += "\n";
+	        	fileout << strTemp;
+	            std::getline ( filein, strTemp );
+	            strTemp = strNew;
+	        }
+	        strTemp += "\n";
+	        fileout << strTemp;
+	    }
+	    remove ( "../txt/books.txt" );
+	    rename ( "../txt/temp.txt", "../txt/books.txt" );
+
+
+
+	    strReplace = title;
+	    strNew = "";
+
+	    std::ifstream fileIn( "../txt/students.txt" ); 
+    	std::ofstream fileOut( "../txt/temp.txt" );
+
+    	strTemp = "";
+
+	    while( std::getline ( fileIn, strTemp ) )
+	    {
+
+	        if( strTemp == name ){
+	        	
+	        	strTemp += "\n";
+	        	fileOut << strTemp;
+	            std::getline ( fileIn, strTemp );
+
+	            strTemp += "\n";
+	        	fileOut << strTemp;
+	            std::getline ( fileIn, strTemp );
+	            
+	            strTemp = strNew;
+	        }
+	        strTemp += "\n";
+	        fileOut << strTemp;
+	    }
+	    remove ( "../txt/students.txt" );
+	    rename ( "../txt/temp.txt", "../txt/students.txt" );
+
+
+	}
+
+
+	void Control::Devolution () {
+		
+		Control control;
+
+		std::string name;
+		std::string title;
+
+		std::cout << "Who are you?...\n Enter name: ";
+
+		std::getline ( std::cin , name );
+
+		std::cout << "Title of the book for devolution: ";
+
+		std::getline ( std::cin , title );
+
+		control.Loans ( name, title );
 
 	}
 

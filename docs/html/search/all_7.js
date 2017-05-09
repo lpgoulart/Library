@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['library',['Library',['../index.html',1,'']]],
-  ['loans',['Loans',['../classControl.html#ad413782c762539562d2ff9401a54eab3',1,'Control']]]
+  ['id',['ID',['../classStudent.html#a1ae2688ebf463a93d001465c510f8970',1,'Student']]]
 ];

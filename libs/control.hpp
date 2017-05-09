@@ -47,13 +47,24 @@ public:
 		*	@param Name of the book
 		*	@return Name of the book founded on system
 		*/
-		std::string searchBook ( std::string );
+		std::string searchBook ( std::string, std::string );
 
 		/**
 		*	@brief See the student loan  
 		*/
 		void Loans ();
 
+		/**
+		*	@brief See the student loan
+		*	@param student name	
+		*	@param book title
+		*/
+		void Loans ( std::string, std::string );
+
+		/**
+		*	@brief Set the book available again
+		*/
+		void Devolution ();
 
 
 

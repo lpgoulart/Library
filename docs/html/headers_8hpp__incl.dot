@@ -11,4 +11,6 @@ digraph "/home/lpgoulart/UFRN/2017.1/LP_1/Projects/Library/libs/headers.hpp"
   Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node5 [label="cctype",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ctime",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }

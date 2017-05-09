@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]]
+  ['loans',['Loans',['../classControl.html#ad413782c762539562d2ff9401a54eab3',1,'Control::Loans()'],['../classControl.html#a4e5343c4033003b873eac91e72c0f8f6',1,'Control::Loans(std::string, std::string)']]]
 ];
