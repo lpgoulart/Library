@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['year',['Year',['../classBook.html#ad3fc2c944e788d179c4d836f36662ae2',1,'Book']]]
+  ['title',['Title',['../classBook.html#a862b94a2fd16ac90209afa4393d8df8a',1,'Book']]]
 ];

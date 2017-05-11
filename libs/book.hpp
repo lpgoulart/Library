@@ -38,6 +38,11 @@ private:
 	*/
 	std::string Student;
 
+	/**
+	*	@brief loan date
+	*/
+	std::string Date;
+
 
 public:
 
@@ -122,6 +127,16 @@ public:
 	*	@return Student
 	*/
 	std::string getStudent ();
+
+	/**
+	*	@brief Set the loan date
+	*/
+	void setDate ( std::string );
+
+	/**
+	*	@brief Get the loan date
+	*/
+	std::string getDate ();
 
 
 	//--------------------------------------------------------------------------------------------------------------------------

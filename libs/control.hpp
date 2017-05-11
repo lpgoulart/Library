@@ -8,6 +8,7 @@
 #define _CONTROL_HPP_
 
 #include "headers.hpp"
+#include "book.hpp"
 
 class Control {
 
@@ -70,6 +71,11 @@ public:
 		*	@brief See wich book is late for devolution
 		*/
 		void lateBook();
+
+		/**
+		*	@brief Check if the loan date has passed
+		*/
+		void check ( Book* );
 
 
 

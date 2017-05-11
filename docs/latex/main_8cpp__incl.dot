@@ -22,4 +22,5 @@ digraph "/home/lpgoulart/UFRN/2017.1/LP_1/Projects/Library/src/main.cpp"
   Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
   Node9 [label="../libs/control.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$control_8hpp.html"];
   Node9 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
 }

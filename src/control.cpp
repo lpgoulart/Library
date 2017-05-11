@@ -114,7 +114,7 @@
 	            strTemp = strNew;
 	            strTemp += "\n";
 	        	fileout << strTemp;
-	            //change available
+	            //change NotAvailable
 	            std::getline ( filein, strTemp );
 	            strTemp += "\n";
 	        	fileout << strTemp;
@@ -302,18 +302,18 @@
 
 				  	if( Dconf < 10 ) {
 				    	if( Mconf < 10 ) {
-				        	strTemp = "0" + std::to_string( ltm->tm_mday ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				        	strTemp = "0" + std::to_string( 1 ) + "/0" + std::to_string( 1  ) + "/" + std::to_string(  1905 + ltm->tm_year );
 				      	}
 				     	else {
-				        	strTemp = "0" + std::to_string( ltm->tm_mday ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				        	strTemp = "0" + std::to_string( 1 ) + "/" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );
 				      	}
 				  	}
 				  	else {
 				    	if( Mconf < 10 ) {
-				        	strTemp = std::to_string( ltm->tm_mday ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				        	strTemp = "0" + std::to_string( 1 ) + "/0" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );
 				      	}
 				      	else {
-				        	strTemp = std::to_string( ltm->tm_mday ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				        	strTemp = "0" + std::to_string( 1 ) + "/" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );
 				      	}
 				  	}
 
@@ -366,7 +366,7 @@
 		std::string name;
 		std::string title;
 
-		std::cout << "Who are you?...\n Enter name: ";
+		std::cout << "Who are you?...\nEnter name: ";
 
 		std::getline ( std::cin , name );
 
@@ -377,8 +377,77 @@
 		control.Loans ( name, title );
 	}
 
+	void Control::check( Book* book ) {
+
+		std::ifstream filein( "../txt/books.txt" ); 
+
+		std::string loan;
+
+		time_t now = time(0);
+
+		tm *ltm = localtime(&now);
+
+		int Dconf = ltm->tm_mday;
+		int Mconf = ltm->tm_mon;
+
+		if( Dconf < 10 ) {
+	    	if( Mconf < 10 ) {
+	 	    	loan = "0" + std::to_string( ltm->tm_mday ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+	 	    }
+	 	   	else {
+	 	    	loan = "0" + std::to_string( ltm->tm_mday ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+	 	    }
+		}
+		else {
+	   		if( Mconf < 10 ) {
+		    	loan = std::to_string( ltm->tm_mday ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+	 	    }
+	 	   	else {
+	 	    	loan = std::to_string( ltm->tm_mday ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+	 	    }
+	}
+
+		loan = loan;
+
+		if ( book->getDate() < loan ) {
+			std::cout << book->getTitle();
+			std::cout << "\nLATE\n\n";
+		}
+
+		
+	}
+
 	void Control::lateBook() {
 
+		Book* book = new Book;
+		std::string strTemp;
+		std::string AorN;
+
+		std::ifstream filein ( "../txt/books.txt" );
+
+		while( std::getline ( filein, strTemp ) )
+	    {
+	    	book->setTitle ( strTemp ); //book title
+	    	std::getline ( filein, strTemp ); //available or not
+	    	AorN = strTemp;
+	    	std::getline ( filein, strTemp ); //author's name
+	    	book->setAuthor ( strTemp ); 
+	    	std::getline ( filein, strTemp ); //publisher's name
+	    	book->setEditor ( strTemp );
+	    	std::getline ( filein, strTemp ); //release year
+	    	book->setYear ( strTemp );
+	    	std::getline ( filein, strTemp ); //loan date
+	    	book->setDate( strTemp );
+
+	    	//std::cout << book->getTitle() << std::endl;
+	    	//std::cout << book->getAuthor() << std::endl;
+	    	//std::cout << book->getEditor() << std::endl;
+	    	//std::cout << book->getYear() << std::endl;
+
+	    	if( ( AorN ==  "Not Available" )  ) {
+	    		check ( book );
+	    	}
+	    }
 	}
 
 //--------------------------------------------------------------------------------------------------------------------------

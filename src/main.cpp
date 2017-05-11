@@ -40,12 +40,13 @@ int main () {
 		std::cout << "\n( 1 ) Search for a book";
 		std::cout << "\n( 2 ) Search for Student";
 		std::cout << "\n( 3 ) Devolutions";
+		std::cout << "\n( 4 ) Late loans";
 		std::cout << "\n( 0 ) End program";
 		std::cout << "\nChoose wisely: ";
 
-			while ( option < 0  || option >= 4 ) {
+			while ( option < 0  || option > 5 ) {
 				std::cin >> option;
-				if ( option < 0 || option > 4 ) {
+				if ( option < 0 || option > 5 ) {
 					std::cout << "Select a valid option: ";
 				}
 			}
@@ -65,6 +66,10 @@ int main () {
 				//devolutions
 				case 3:
 					control.Devolution();
+				break;
+				//check late loans
+				case 4:
+					control.lateBook();
 				break;
 				case 0:
 					loop = false;
