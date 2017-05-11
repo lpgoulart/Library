@@ -66,6 +66,10 @@ public:
 		*/
 		void Devolution ();
 
+		/**
+		*	@brief See wich book is late for devolution
+		*/
+		void lateBook();
 
 
 

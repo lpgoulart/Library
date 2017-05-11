@@ -10,7 +10,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <cctype>
 #include <fstream>
 #include <ctime>
 

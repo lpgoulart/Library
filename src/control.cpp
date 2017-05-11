@@ -87,12 +87,14 @@
 		else {
 			std::cout << "\nFile is not open\n";
 		}
-
 	}
 
 
 	std::string Control::searchBook ( std::string bookT, std::string Name ) {
 
+		time_t now = time(0);
+
+   		tm *ltm = localtime(&now);
 
 		std::string strReplace = "Available";
 		std::string strNew = "Not Available";
@@ -110,6 +112,46 @@
 	        	fileout << strTemp;
 	            std::getline ( filein, strTemp );
 	            strTemp = strNew;
+	            strTemp += "\n";
+	        	fileout << strTemp;
+	            //change available
+	            std::getline ( filein, strTemp );
+	            strTemp += "\n";
+	        	fileout << strTemp;
+
+	        	std::getline ( filein, strTemp );
+	            strTemp += "\n";
+	        	fileout << strTemp;
+
+	        	std::getline ( filein, strTemp );
+	            strTemp += "\n";
+	        	fileout << strTemp;
+
+	        	std::getline ( filein, strTemp );
+
+	        		int Dconf = ltm->tm_mday;
+					int Mconf = ltm->tm_mon;
+
+				  	if( Dconf < 10 ) {
+				    	if( Mconf < 10 ) {
+				        	strTemp = "0" + std::to_string( ltm->tm_mday + 5 ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				     	else {
+				        	strTemp = "0" + std::to_string( ltm->tm_mday + 5 ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				  	}
+				  	else {
+				    	if( Mconf < 10 ) {
+				        	strTemp = std::to_string( ltm->tm_mday + 5 ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				      	else {
+				        	strTemp = std::to_string( ltm->tm_mday + 5 ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				  	}
+
+	        	fileout << strTemp + "\n";
+	        	std::getline ( filein, strTemp );
+
 	        }
 	        strTemp += "\n";
 	        fileout << strTemp;
@@ -149,7 +191,6 @@
 	    rename ( "../txt/temp.txt", "../txt/students.txt" );
 
 	    return bookT;
-
 	}
 
 
@@ -208,16 +249,20 @@
 					std::cout << "\nBorrow book: ";
 					std::getline ( std::cin, str );
 					control.searchBook ( str, student.getName() );
+				}
 			}
+		} 
+		else {
+			std::cout << "\nFile is not open\n";
 		}
-	} 
-	else {
-		std::cout << "\nFile is not open\n";
 	}
-}
 
 
 	void Control::Loans ( std::string name, std::string title ) {
+
+		time_t now = time(0);
+
+   		tm *ltm = localtime(&now);
 
 		std::string strReplace = "Not Available";
 		std::string strNew = "Available";
@@ -235,6 +280,45 @@
 	        	fileout << strTemp;
 	            std::getline ( filein, strTemp );
 	            strTemp = strNew;
+	            strTemp += "\n";
+	        	fileout << strTemp;
+	            //change available
+	            std::getline ( filein, strTemp );
+	            strTemp += "\n";
+	        	fileout << strTemp;
+
+	        	std::getline ( filein, strTemp );
+	            strTemp += "\n";
+	        	fileout << strTemp;
+
+	        	std::getline ( filein, strTemp );
+	            strTemp += "\n";
+	        	fileout << strTemp;
+
+	        	std::getline ( filein, strTemp );
+
+		        	int Dconf = ltm->tm_mday;
+					int Mconf = ltm->tm_mon;
+
+				  	if( Dconf < 10 ) {
+				    	if( Mconf < 10 ) {
+				        	strTemp = "0" + std::to_string( ltm->tm_mday ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				     	else {
+				        	strTemp = "0" + std::to_string( ltm->tm_mday ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				  	}
+				  	else {
+				    	if( Mconf < 10 ) {
+				        	strTemp = std::to_string( ltm->tm_mday ) + "/0" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				      	else {
+				        	strTemp = std::to_string( ltm->tm_mday ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
+				      	}
+				  	}
+
+	        	fileout << strTemp + "\n";
+	        	std::getline ( filein, strTemp );
 	        }
 	        strTemp += "\n";
 	        fileout << strTemp;
@@ -272,8 +356,6 @@
 	    }
 	    remove ( "../txt/students.txt" );
 	    rename ( "../txt/temp.txt", "../txt/students.txt" );
-
-
 	}
 
 
@@ -293,6 +375,9 @@
 		std::getline ( std::cin , title );
 
 		control.Loans ( name, title );
+	}
+
+	void Control::lateBook() {
 
 	}
 

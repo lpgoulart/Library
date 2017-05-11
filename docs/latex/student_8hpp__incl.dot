@@ -12,7 +12,5 @@ digraph "/home/lpgoulart/UFRN/2017.1/LP_1/Projects/Library/libs/student.hpp"
   Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
   Node5 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
-  Node6 [label="cctype",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
-  Node7 [label="ctime",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 [label="ctime",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }
