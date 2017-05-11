@@ -34,7 +34,11 @@ std\+::string \hyperlink{classBook_ae5e61d969f34faf755921a397bdfaf20}{get\+Stude
 void \hyperlink{classBook_a8e0cf166c4e0b5f412d0b472f83e6972}{set\+Date} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the loan date. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a23a3ee3588cc83853c02182afbb5842e}{get\+Date} ()
-\begin{DoxyCompactList}\small\item\em Get the loan date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the loan date. \end{DoxyCompactList}\item 
+void \hyperlink{classBook_a5077a2720ae494b0725a0b7baeb3e7f2}{set\+Available} (std\+::string)
+\begin{DoxyCompactList}\small\item\em see if it is vailable or not \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classBook_a41d272a411cef781cbd44cb7eca9ac60}{get\+Available} ()
+\begin{DoxyCompactList}\small\item\em Set the loan date. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,7 +53,9 @@ std\+::string \hyperlink{classBook_ad3fc2c944e788d179c4d836f36662ae2}{Year}
 std\+::string \hyperlink{classBook_ae89daf9343a917dced86da884961ed3a}{Student}
 \begin{DoxyCompactList}\small\item\em name of the student who take the book \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a45a1a5f93a5ec021cc605b0c905d1d6f}{Date}
-\begin{DoxyCompactList}\small\item\em loan date \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em loan date \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classBook_ae5f0bbe5fb49a8cd68bfc77a59afed36}{Available}
+\begin{DoxyCompactList}\small\item\em see if it is available \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -109,6 +115,20 @@ Get the author\textquotesingle{}s name.
 \begin{DoxyReturn}{Returns}
 Author\textquotesingle{}s name 
 \end{DoxyReturn}
+\index{Book@{Book}!get\+Available@{get\+Available}}
+\index{get\+Available@{get\+Available}!Book@{Book}}
+\subsubsection[{\texorpdfstring{get\+Available()}{getAvailable()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::get\+Available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_a41d272a411cef781cbd44cb7eca9ac60}{}\label{classBook_a41d272a411cef781cbd44cb7eca9ac60}
+
+
+Set the loan date. 
+
+\begin{DoxyReturn}{Returns}
+string from file 
+\end{DoxyReturn}
 \index{Book@{Book}!get\+Date@{get\+Date}}
 \index{get\+Date@{get\+Date}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Date()}{getDate()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::get\+Date (
@@ -120,6 +140,9 @@ Author\textquotesingle{}s name
 
 Get the loan date. 
 
+\begin{DoxyReturn}{Returns}
+date from file 
+\end{DoxyReturn}
 \index{Book@{Book}!get\+Editor@{get\+Editor}}
 \index{get\+Editor@{get\+Editor}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Editor()}{getEditor()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::get\+Editor (
@@ -192,6 +215,22 @@ Set the author\textquotesingle{}s name.
 {\em Author\textquotesingle{}s} & name \\
 \hline
 \end{DoxyParams}
+\index{Book@{Book}!set\+Available@{set\+Available}}
+\index{set\+Available@{set\+Available}!Book@{Book}}
+\subsubsection[{\texorpdfstring{set\+Available(std\+::string)}{setAvailable(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Available (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{available}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_a5077a2720ae494b0725a0b7baeb3e7f2}{}\label{classBook_a5077a2720ae494b0725a0b7baeb3e7f2}
+
+
+see if it is vailable or not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
 \index{Book@{Book}!set\+Date@{set\+Date}}
 \index{set\+Date@{set\+Date}!Book@{Book}}
 \subsubsection[{\texorpdfstring{set\+Date(std\+::string)}{setDate(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Date (
@@ -203,6 +242,11 @@ Set the author\textquotesingle{}s name.
 
 Set the loan date. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \\
+\hline
+\end{DoxyParams}
 \index{Book@{Book}!set\+Editor@{set\+Editor}}
 \index{set\+Editor@{set\+Editor}!Book@{Book}}
 \subsubsection[{\texorpdfstring{set\+Editor(std\+::string)}{setEditor(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Editor (
@@ -276,6 +320,13 @@ Set the year of the book.
 
 
 author name 
+
+\index{Book@{Book}!Available@{Available}}
+\index{Available@{Available}!Book@{Book}}
+\subsubsection[{\texorpdfstring{Available}{Available}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::\+Available\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classBook_ae5f0bbe5fb49a8cd68bfc77a59afed36}{}\label{classBook_ae5f0bbe5fb49a8cd68bfc77a59afed36}
+
+
+see if it is available 
 
 \index{Book@{Book}!Date@{Date}}
 \index{Date@{Date}!Book@{Book}}

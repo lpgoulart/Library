@@ -43,6 +43,11 @@ private:
 	*/
 	std::string Date;
 
+	/**
+	*	@brief see if it is available
+	*/
+	std::string Available;
+
 
 public:
 
@@ -130,13 +135,27 @@ public:
 
 	/**
 	*	@brief Set the loan date
+	*	@param string
 	*/
 	void setDate ( std::string );
 
 	/**
 	*	@brief Get the loan date
+	*	@return date from file
 	*/
 	std::string getDate ();
+
+	/**
+	*	@brief see if it is vailable or not
+	*	@param string
+	*/
+	void setAvailable ( std::string );
+
+	/**
+	*	@brief Set the loan date
+	*	@return string from file
+	*/
+	std::string getAvailable ();
 
 
 	//--------------------------------------------------------------------------------------------------------------------------

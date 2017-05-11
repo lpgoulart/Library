@@ -3,6 +3,7 @@ var searchData=
   ['searchbook',['searchBook',['../classControl.html#a8b6c2e30e71b54786b3ec01e8524076f',1,'Control::searchBook()'],['../classControl.html#a7719518366f488614467555e53a6d0c2',1,'Control::searchBook(std::string, std::string)']]],
   ['setadress',['setAdress',['../classStudent.html#a69ded62af3d483e4c9bf8505a58cefe5',1,'Student']]],
   ['setauthor',['setAuthor',['../classBook.html#a8e1a623d5795141facc30a6d298f3c75',1,'Book']]],
+  ['setavailable',['setAvailable',['../classBook.html#a5077a2720ae494b0725a0b7baeb3e7f2',1,'Book']]],
   ['setdate',['setDate',['../classBook.html#a8e0cf166c4e0b5f412d0b472f83e6972',1,'Book']]],
   ['seteditor',['setEditor',['../classBook.html#a463af516921d49d46b730c455b2de0c3',1,'Book']]],
   ['setid',['setID',['../classStudent.html#ab9bba1e271f7aebdbba115311873482a',1,'Student']]],

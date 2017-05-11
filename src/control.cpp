@@ -51,8 +51,11 @@
 					book.setTitle ( bookTitle );
 
 						std::getline ( myFile, str );
-					book.setStudent( str );					
+					book.setStudent( str );			
 
+						std::getline ( myFile, str );
+					book.setAvailable( str );		
+ 
 						std::getline ( myFile, str );
 					book.setAuthor( str );
 
@@ -75,8 +78,8 @@
 				std::cout << book.getEditor() << std::endl;
 				std::cout << book.getYear() << std::endl;
 
-				if( book.getStudent() == "Not Available" ) {
-					std::cout << "Book borrowed\n\n";
+				if( book.getAvailable() == "Not Available" ) {
+					std::cout << "Book borrowed by: " << book.getStudent() << "\n\n";
 				}
 				else {
 					std::cout << "Available\n\n";
@@ -99,7 +102,7 @@
    		tm *ltm = localtime(&now);
 
 		std::string strReplace = "Available";
-		std::string strNew = "Not Available";
+		std::string strNew = "Not Available"; 
 
 		std::ifstream filein( "../txt/books.txt" ); 
     	std::ofstream fileout( "../txt/temp.txt" );
@@ -112,24 +115,24 @@
 	        if( strTemp == bookT ){
 	        	strTemp += "\n";
 	        	fileout << strTemp;
-	            std::getline ( filein, strTemp );
+	        		std::getline ( filein, strTemp );//student
+	        	strTemp = Name + "\n";
+	        	fileout << strTemp;
+	            	std::getline ( filein, strTemp );//available or not
 	            strTemp = strNew;
 	            strTemp += "\n";
 	        	fileout << strTemp;
-	            //change NotAvailable
-	            std::getline ( filein, strTemp );
+	            	std::getline ( filein, strTemp );//author
 	            strTemp += "\n";
 	        	fileout << strTemp;
 
-	        	std::getline ( filein, strTemp );
+	        		std::getline ( filein, strTemp );//editor
 	            strTemp += "\n";
 	        	fileout << strTemp;
 
-	        	std::getline ( filein, strTemp );
+	        		std::getline ( filein, strTemp ); //year
 	            strTemp += "\n";
 	        	fileout << strTemp;
-
-	        	std::getline ( filein, strTemp );
 
 	        		int Dconf = ltm->tm_mday;
 					int Mconf = ltm->tm_mon;
@@ -152,6 +155,7 @@
 				  	}
 
 	        	fileout << strTemp + "\n";
+	        	std::getline ( filein, strTemp );
 	        	std::getline ( filein, strTemp );
 
 	        }
@@ -282,46 +286,27 @@
 	        if( strTemp == title ){
 	        	strTemp += "\n";
 	        	fileout << strTemp;
-	            std::getline ( filein, strTemp );
+	        		std::getline ( filein, strTemp );//student
+	        	strTemp = "\n";
+	        	fileout << strTemp;
+	            	std::getline ( filein, strTemp );//available or not
 	            strTemp = strNew;
 	            strTemp += "\n";
 	        	fileout << strTemp;
-	            //change available
-	            std::getline ( filein, strTemp );
+	            	std::getline ( filein, strTemp );//author
+	            strTemp += "\n";
+	        	fileout << strTemp;
+	        		std::getline ( filein, strTemp );//editor
+	            strTemp += "\n";
+	        	fileout << strTemp;
+	        		std::getline ( filein, strTemp ); //year
 	            strTemp += "\n";
 	        	fileout << strTemp;
 
-	        	std::getline ( filein, strTemp );
-	            strTemp += "\n";
-	        	fileout << strTemp;
-
-	        	std::getline ( filein, strTemp );
-	            strTemp += "\n";
-	        	fileout << strTemp;
-
-	        	std::getline ( filein, strTemp );
-
-		        	int Dconf = ltm->tm_mday;
-					int Mconf = ltm->tm_mon;
-
-				  	if( Dconf < 10 ) {
-				    	if( Mconf < 10 ) {
-				        	strTemp = "0" + std::to_string( 1 ) + "/0" + std::to_string( 1  ) + "/" + std::to_string(  1905 + ltm->tm_year );
-				      	}
-				     	else {
-				        	strTemp = "0" + std::to_string( 1 ) + "/" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );
-				      	}
-				  	}
-				  	else {
-				    	if( Mconf < 10 ) {
-				        	strTemp = "0" + std::to_string( 1 ) + "/0" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );
-				      	}
-				      	else {
-				        	strTemp = "0" + std::to_string( 1 ) + "/" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );
-				      	}
-				  	}
+				strTemp = "0" + std::to_string( 1 ) + "/0" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );      	
 
 	        	fileout << strTemp + "\n";
+	        	std::getline ( filein, strTemp );
 	        	std::getline ( filein, strTemp );
 	        }
 	        strTemp += "\n";
@@ -414,40 +399,41 @@
 		loan = loan;
 
 		if ( book->getDate() < loan ) {
-			std::cout << book->getTitle();
+			std::cout << "Student: " << book->getStudent() << std::endl;
+			std::cout << "Book: " << book->getTitle() << std::endl;
 			std::cout << "\nLATE\n\n";
 		}
-		delete ltm;
 	}
 
 	void Control::lateBook() {
 
 		Book* book = new Book;
 		std::string strTemp;
-		std::string AorN;
 
 		std::ifstream filein ( "../txt/books.txt" );
 
 		while( std::getline ( filein, strTemp ) )
 	    {
 	    	book->setTitle ( strTemp ); //book title
-	    	std::getline ( filein, strTemp ); //available or not
-	    	AorN = strTemp;
-	    	std::getline ( filein, strTemp ); //author's name
+	    		std::getline ( filein, strTemp ); //available or not
+	    	book->setStudent( strTemp );
+	    		std::getline ( filein, strTemp ); //available or not
+	    	book->setAvailable( strTemp );
+	    		std::getline ( filein, strTemp ); //author's name
 	    	book->setAuthor ( strTemp ); 
-	    	std::getline ( filein, strTemp ); //publisher's name
+	    		std::getline ( filein, strTemp ); //publisher's name
 	    	book->setEditor ( strTemp );
-	    	std::getline ( filein, strTemp ); //release year
+	    		std::getline ( filein, strTemp ); //release year
 	    	book->setYear ( strTemp );
-	    	std::getline ( filein, strTemp ); //loan date
+	    		std::getline ( filein, strTemp ); //loan date
 	    	book->setDate( strTemp );
 
-	    	if( ( AorN ==  "Not Available" )  ) {
+	    	if( ( book->getAvailable() ==  "Not Available" )  ) {
 	    		check ( book );
 	    	}
 	    }
 
-	    delete book;
+	    //delete book;
 	}
 
 //--------------------------------------------------------------------------------------------------------------------------

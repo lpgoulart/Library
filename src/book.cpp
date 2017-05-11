@@ -77,6 +77,14 @@
 		return this->Date;
 	}
 
+	void Book::setAvailable ( std::string available ) {
+		this->Available = available;
+	}
+
+	std::string Book::getAvailable () {
+		return this->Available;
+	}
+	
 //--------------------------------------------------------------------------------------------------------------------------
 //	End Getters & Setters
 //--------------------------------------------------------------------------------------------------------------------------
