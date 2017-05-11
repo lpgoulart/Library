@@ -87,6 +87,8 @@
 		else {
 			std::cout << "\nFile is not open\n";
 		}
+
+		myFile.close();
 	}
 
 
@@ -196,8 +198,8 @@
 
 	void Control::Loans () {
 
-		Student student;
 		Control control;
+		Student student;
 		Book book;
 
 		std::fstream myFile;
@@ -255,6 +257,8 @@
 		else {
 			std::cout << "\nFile is not open\n";
 		}
+
+		myFile.close();
 	}
 
 
@@ -413,8 +417,7 @@
 			std::cout << book->getTitle();
 			std::cout << "\nLATE\n\n";
 		}
-
-		
+		delete ltm;
 	}
 
 	void Control::lateBook() {
@@ -439,15 +442,12 @@
 	    	std::getline ( filein, strTemp ); //loan date
 	    	book->setDate( strTemp );
 
-	    	//std::cout << book->getTitle() << std::endl;
-	    	//std::cout << book->getAuthor() << std::endl;
-	    	//std::cout << book->getEditor() << std::endl;
-	    	//std::cout << book->getYear() << std::endl;
-
 	    	if( ( AorN ==  "Not Available" )  ) {
 	    		check ( book );
 	    	}
 	    }
+
+	    delete book;
 	}
 
 //--------------------------------------------------------------------------------------------------------------------------
