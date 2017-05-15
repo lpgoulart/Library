@@ -4,12 +4,12 @@ This code simulate a simple library system toten that make loans, devolutions, b
 
 ## Information
 
-* More information and how-tos [available, soon, on lpgoulart.wixsite/it-developer](https://lpgoulart.wixsite.com/it-developer)
+* More information [available, soon, on lpgoulart.wixsite/it-developer](https://lpgoulart.wixsite.com/it-developer)
 * Source code [available on GitHub](https://github.com/lpgoulart/Library)
 
 ## Getting Help
 
-* Please report bugs on the [issue tracker](https://github.com/lpgoulart/Library/issues).
+* Report bugs on the [issue tracker](https://github.com/lpgoulart/Library/issues).
 
 ## Installation
 
