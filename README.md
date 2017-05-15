@@ -68,10 +68,10 @@ This code simulate a simple library system toten that make loans, devolutions, b
 
 
 ```
-	> 1 				( ID ) 
+	> 1 		    ( ID ) 
 	> Leonardo Goulart  ( Student's name )
 	> Manaus, Amazonas  ( Student's adress )
-	> 					( Book borrowed by the student )
+	> 		    ( Book borrowed by the student )
 	...
 
 ```
@@ -83,12 +83,12 @@ This code simulate a simple library system toten that make loans, devolutions, b
 
 ```
 	> O nome do vento	( Book tittle )
-	> 					( ID of student who borrow the book )
+	> 			( ID of student who borrow the book )
 	> Available 		( Availability )
 	> Patrick Ruthfuss	( Author's name )
 	> The archer		( Editor's name )
-	> 2011				( Year of publication )
-	> 					( Loan date )
+	> 2011			( Year of publication )
+	> 			( Loan date )
 	... 
 
 ```
