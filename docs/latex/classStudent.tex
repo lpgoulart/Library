@@ -24,7 +24,9 @@ std\+::string \hyperlink{classStudent_aeb78f390f160a1bcad595e7487cdf881}{get\+Ad
 void \hyperlink{classStudent_ab9bba1e271f7aebdbba115311873482a}{set\+ID} (std\+::string)
 \begin{DoxyCompactList}\small\item\em Set the student\textquotesingle{}s ID. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classStudent_a87fcf0ef568c017d246b559c31db5857}{get\+ID} ()
-\begin{DoxyCompactList}\small\item\em Get the student\textquotesingle{}s ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the student\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classStudent_a5c1c6529f21a650b318e4c0220f32a47}{Search} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Search for a specific student from ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -134,6 +136,25 @@ Get the student\textquotesingle{}s name.
 \begin{DoxyReturn}{Returns}
 name of the student 
 \end{DoxyReturn}
+\index{Student@{Student}!Search@{Search}}
+\index{Search@{Search}!Student@{Student}}
+\subsubsection[{\texorpdfstring{Search(std\+::string)}{Search(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Student\+::\+Search (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classStudent_a5c1c6529f21a650b318e4c0220f32a47}{}\label{classStudent_a5c1c6529f21a650b318e4c0220f32a47}
+
+
+Search for a specific student from ID. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classStudent}{Student}\textquotesingle{}s name 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & \\
+\hline
+\end{DoxyParams}
 \index{Student@{Student}!set\+Adress@{set\+Adress}}
 \index{set\+Adress@{set\+Adress}!Student@{Student}}
 \subsubsection[{\texorpdfstring{set\+Adress(std\+::string)}{setAdress(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Student\+::set\+Adress (

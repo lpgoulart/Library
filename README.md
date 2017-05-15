@@ -1,6 +1,6 @@
 # Library
 
-/..        TO DO         ../, writen in C++ on Programmig Language 1 grade at the IT Bachelor degree - UFRN
+This code simulate a simple library system toten that make loans, devolutions, book searches and check availability, writen in C++ on Programmig Language 1 grade at the IT Bachelor degree - UFRN
 
 ## Information
 
@@ -13,4 +13,27 @@
 
 ## Installation
 
-/..        TO DO         ../
+* Download the full repository from my github [click here](https://github.com/lpgoulart/Library), or follow the steps below:
+
+* On terminal:
+
+```
+	$ git clone https://github.com/lpgoulart/Library.git
+	$ cd Library
+	$ make
+
+```
+
+* To run, just go bin directory by typing:
+
+```
+	$ cd bin
+	./Library
+
+```
+
+* The SuperUser access password if "1234"
+
+## Relatorio
+
+* Search for book by tittle: src/book.cpp:

@@ -143,6 +143,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a41d272a411cef781cbd44cb7eca9ac60"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBook.html#a41d272a411cef781cbd44cb7eca9ac60">getAvailable</a> ()</td></tr>
 <tr class="memdesc:a41d272a411cef781cbd44cb7eca9ac60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the loan date.  <a href="#a41d272a411cef781cbd44cb7eca9ac60">More...</a><br /></td></tr>
 <tr class="separator:a41d272a411cef781cbd44cb7eca9ac60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2214e9b5fc10c125d8043b1dc50277f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBook.html#a2214e9b5fc10c125d8043b1dc50277f4">List</a> ()</td></tr>
+<tr class="memdesc:a2214e9b5fc10c125d8043b1dc50277f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all the books in the library.  <a href="#a2214e9b5fc10c125d8043b1dc50277f4">More...</a><br /></td></tr>
+<tr class="separator:a2214e9b5fc10c125d8043b1dc50277f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e045711b346124d81f16210a67277a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBook.html#a70e045711b346124d81f16210a67277a">Check</a> (std::string)</td></tr>
+<tr class="memdesc:a70e045711b346124d81f16210a67277a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the book is in collection.  <a href="#a70e045711b346124d81f16210a67277a">More...</a><br /></td></tr>
+<tr class="separator:a70e045711b346124d81f16210a67277a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -215,6 +221,31 @@ Project to Programmig Language 1 </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a70e045711b346124d81f16210a67277a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Book::Check </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>bookTittle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the book is in collection. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the book is found ou say it wasnt founded </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tittle</td><td>of the book </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a7e8ae0106c07e4208d4b8640bc6af7f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -338,6 +369,23 @@ Project to Programmig Language 1 </dd></dl>
 
 <p>Get the year of release. </p>
 <dl class="section return"><dt>Returns</dt><dd>the year </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2214e9b5fc10c125d8043b1dc50277f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Book::List </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List all the books in the library. </p>
 
 </div>
 </div>

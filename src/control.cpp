@@ -5,9 +5,7 @@
 */
 
 #include "../libs/headers.hpp"
-#include "../libs/control.hpp"
-#include "../libs/book.hpp"
-#include "../libs/student.hpp"
+
 
 //--------------------------------------------------------------------------------------------------------------------------
 //	Constructor & Destructor
@@ -29,9 +27,16 @@
 //	Functions
 //--------------------------------------------------------------------------------------------------------------------------
 
+
+
+//--------------------------------------------------------------------------------------------------------------------------
+//	Search book by tittle
+//--------------------------------------------------------------------------------------------------------------------------
+
 	void Control::searchBook () {
 
 		Book book;
+		Student student;
 
 		std::fstream myFile;
 	    myFile.open ("../txt/books.txt", std::fstream::in | std::fstream::out);
@@ -79,7 +84,7 @@
 				std::cout << book.getYear() << std::endl;
 
 				if( book.getAvailable() == "Not Available" ) {
-					std::cout << "Book borrowed by: " << book.getStudent() << "\n\n";
+					std::cout << "Book borrowed by: " << student.Search( book.getStudent() ) << "\n\n";
 				}
 				else {
 					std::cout << "Available\n\n";
@@ -95,7 +100,12 @@
 	}
 
 
-	std::string Control::searchBook ( std::string bookT, std::string Name ) {
+//--------------------------------------------------------------------------------------------------------------------------
+//	End search book by tittle
+//--------------------------------------------------------------------------------------------------------------------------
+
+
+	std::string Control::searchBook ( std::string bookT, std::string ID ) {
 
 		time_t now = time(0);
 
@@ -116,7 +126,7 @@
 	        	strTemp += "\n";
 	        	fileout << strTemp;
 	        		std::getline ( filein, strTemp );//student
-	        	strTemp = Name + "\n";
+	        	strTemp = ID + "\n";
 	        	fileout << strTemp;
 	            	std::getline ( filein, strTemp );//available or not
 	            strTemp = strNew;
@@ -178,9 +188,13 @@
 	    while( std::getline ( fileIn, strTemp ) )
 	    {
 
-	        if( strTemp == Name ){
+	        if( strTemp == ID ){
 	        	
 	        	strTemp += "\n";
+	        	fileOut << strTemp;
+	            std::getline ( fileIn, strTemp );
+
+	            strTemp += "\n";
 	        	fileOut << strTemp;
 	            std::getline ( fileIn, strTemp );
 
@@ -254,8 +268,20 @@
 				else {
 					std::cout << "\nBorrow book: ";
 					std::getline ( std::cin, str );
-					control.searchBook ( str, student.getName() );
-				}
+
+						if ( book.Check( str ) != "Book not founded" ) {
+
+							control.searchBook ( str, student.getID() );
+						
+						}	
+						else {
+
+							std::cout << "Book does not exist\n";
+							std::cout << "Press Enter to continue..."; 
+							std::getline ( std::cin, id );
+							std::cout << "\033[2J\033[1;1H";
+						}
+				} 
 			}
 		} 
 		else {
@@ -266,11 +292,7 @@
 	}
 
 
-	void Control::Loans ( std::string name, std::string title ) {
-
-		time_t now = time(0);
-
-   		tm *ltm = localtime(&now);
+	void Control::Loans ( std::string id, std::string title ) {
 
 		std::string strReplace = "Not Available";
 		std::string strNew = "Available";
@@ -303,7 +325,7 @@
 	            strTemp += "\n";
 	        	fileout << strTemp;
 
-				strTemp = "0" + std::to_string( 1 ) + "/0" + std::to_string( 1 ) + "/" + std::to_string(  1905 + ltm->tm_year );      	
+				strTemp = "";      	
 
 	        	fileout << strTemp + "\n";
 	        	std::getline ( filein, strTemp );
@@ -328,9 +350,13 @@
 	    while( std::getline ( fileIn, strTemp ) )
 	    {
 
-	        if( strTemp == name ){
+	        if( strTemp == id ){
 	        	
 	        	strTemp += "\n";
+	        	fileOut << strTemp;
+	            std::getline ( fileIn, strTemp );
+
+	            strTemp += "\n";
 	        	fileOut << strTemp;
 	            std::getline ( fileIn, strTemp );
 
@@ -351,22 +377,40 @@
 	void Control::Devolution () {
 		
 		Control control;
+		Student student;
+		Book book;
 
-		std::string name;
+		std::string id;
 		std::string title;
 
-		std::cout << "Who are you?...\nEnter name: ";
+		std::cout << "Enter ID: ";
 
-		std::getline ( std::cin , name );
+		std::getline ( std::cin , id );
 
-		std::cout << "Title of the book for devolution: ";
+		if ( student.Search ( id ) != "Student not founded" ) {
 
-		std::getline ( std::cin , title );
+			std::cout << "Title of the book for devolution: ";
 
-		control.Loans ( name, title );
+			std::getline ( std::cin , title );
+
+				if ( book.Check( title ) != "Book not founded" ) {
+					control.Loans ( id, title );
+				} 
+				else {
+					std::cout << "Book tittle does not exist \n\n";
+				}
+		} else {
+			std::cout << "Student ID does not exist \n\n";
+		}
+
+		std::cout << "Press Enter to continue..."; 
+		std::getline ( std::cin, id );
+		std::cout << "\033[2J\033[1;1H";
 	}
 
 	void Control::check( Book* book ) {
+
+		Student student;
 
 		std::ifstream filein( "../txt/books.txt" ); 
 
@@ -394,12 +438,12 @@
 	 	   	else {
 	 	    	loan = std::to_string( ltm->tm_mday ) + "/" + std::to_string( 1 + ltm->tm_mon ) + "/" + std::to_string(  1900 + ltm->tm_year );
 	 	    }
-	}
+		}
 
 		loan = loan;
 
 		if ( book->getDate() < loan ) {
-			std::cout << "Student: " << book->getStudent() << std::endl;
+			std::cout << "Student: " << student.Search( book->getStudent() ) << std::endl;
 			std::cout << "Book: " << book->getTitle() << std::endl;
 			std::cout << "\nLATE\n\n";
 		}

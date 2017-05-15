@@ -12,5 +12,8 @@
 #include <string>
 #include <fstream>
 #include <ctime>
+#include "../libs/control.hpp"
+#include "../libs/book.hpp"
+#include "../libs/student.hpp"
 
 #endif

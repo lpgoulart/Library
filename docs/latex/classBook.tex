@@ -38,7 +38,11 @@ std\+::string \hyperlink{classBook_a23a3ee3588cc83853c02182afbb5842e}{get\+Date}
 void \hyperlink{classBook_a5077a2720ae494b0725a0b7baeb3e7f2}{set\+Available} (std\+::string)
 \begin{DoxyCompactList}\small\item\em see if it is vailable or not \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a41d272a411cef781cbd44cb7eca9ac60}{get\+Available} ()
-\begin{DoxyCompactList}\small\item\em Set the loan date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the loan date. \end{DoxyCompactList}\item 
+void \hyperlink{classBook_a2214e9b5fc10c125d8043b1dc50277f4}{List} ()
+\begin{DoxyCompactList}\small\item\em List all the books in the library. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classBook_a70e045711b346124d81f16210a67277a}{Check} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Check if the book is in collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -101,6 +105,25 @@ Destructor.
 
 
 \subsection{Member Function Documentation}
+\index{Book@{Book}!Check@{Check}}
+\index{Check@{Check}!Book@{Book}}
+\subsubsection[{\texorpdfstring{Check(std\+::string)}{Check(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::\+Check (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{book\+Tittle}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_a70e045711b346124d81f16210a67277a}{}\label{classBook_a70e045711b346124d81f16210a67277a}
+
+
+Check if the book is in collection. 
+
+\begin{DoxyReturn}{Returns}
+True if the book is found ou say it wasnt founded 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em tittle} & of the book \\
+\hline
+\end{DoxyParams}
 \index{Book@{Book}!get\+Author@{get\+Author}}
 \index{get\+Author@{get\+Author}!Book@{Book}}
 \subsubsection[{\texorpdfstring{get\+Author()}{getAuthor()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Book\+::get\+Author (
@@ -199,6 +222,17 @@ Get the year of release.
 \begin{DoxyReturn}{Returns}
 the year 
 \end{DoxyReturn}
+\index{Book@{Book}!List@{List}}
+\index{List@{List}!Book@{Book}}
+\subsubsection[{\texorpdfstring{List()}{List()}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_a2214e9b5fc10c125d8043b1dc50277f4}{}\label{classBook_a2214e9b5fc10c125d8043b1dc50277f4}
+
+
+List all the books in the library. 
+
 \index{Book@{Book}!set\+Author@{set\+Author}}
 \index{set\+Author@{set\+Author}!Book@{Book}}
 \subsubsection[{\texorpdfstring{set\+Author(std\+::string)}{setAuthor(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Author (

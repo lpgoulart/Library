@@ -2,11 +2,15 @@ CC = g++
 CPPFLAGS = -W -Wall -O0 -pedantic -std=c++11
 CPPOBJCS = src/main.o src/student.o src/book.o src/control.o
 PROG = bin/library
+TXT = txt/students.txt txt/books.txt
 
-all: dir $(PROG) move
+all: dir text $(PROG) move
 
 dir:
 	mkdir -p bin build 
+
+text:
+	touch $(TXT)
 
 $(PROG): $(CPPOBJCS)
 	$(CC) $(CPPOBJCS) -o $(PROG)

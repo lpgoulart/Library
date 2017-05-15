@@ -5,7 +5,6 @@
 */
 
 #include "../libs/headers.hpp"
-#include "../libs/book.hpp"
 
 //--------------------------------------------------------------------------------------------------------------------------
 //	Constructor & Destructor
@@ -87,4 +86,71 @@
 	
 //--------------------------------------------------------------------------------------------------------------------------
 //	End Getters & Setters
+//--------------------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------------------
+//	List function
+//--------------------------------------------------------------------------------------------------------------------------
+
+	void Book::List () {
+
+		Book book;
+
+		std::ifstream filein ( "../txt/books.txt" );
+
+		std::string strTemp;
+
+		std::cout << "Collection\n\n";
+
+		while ( std::getline ( filein, strTemp ) ) {
+
+			std::cout << strTemp << std::endl; //prints the book's tittle
+			std::getline ( filein, strTemp ); //avoid the student ID
+			std::getline ( filein, strTemp ); //avoid the availability
+
+			std::getline ( filein, strTemp );
+			std::cout << strTemp << std::endl; //prints the author's name
+
+			std::getline ( filein, strTemp );
+			std::cout << strTemp << std::endl; //prints the author's name
+
+			std::getline ( filein, strTemp );
+			std::cout << strTemp << std::endl; //prints the editor's name
+
+			std::getline ( filein, strTemp );
+			std::cout << strTemp << std::endl; //prints the publiction year
+
+		}
+
+		std::cout << "Press Enter to continue..."; 
+		std::getline ( std::cin, strTemp );
+		std::cout << "\033[2J\033[1;1H";
+
+	}
+
+//--------------------------------------------------------------------------------------------------------------------------
+//	End of list function
+//--------------------------------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------------------------------------
+//	Check function
+//--------------------------------------------------------------------------------------------------------------------------
+
+	std::string Book::Check ( std::string bookTittle ) {
+
+		std::ifstream filein( "../txt/books.txt" );
+
+		std::string strTemp;
+
+		while ( std::getline ( filein, strTemp ) ) {
+			if( strTemp == bookTittle ) {
+				return "";
+			}
+		}
+
+		return "Book not founded";
+	}
+
+//--------------------------------------------------------------------------------------------------------------------------
+//	End of check function
 //--------------------------------------------------------------------------------------------------------------------------

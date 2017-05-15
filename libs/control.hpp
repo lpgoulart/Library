@@ -39,11 +39,6 @@ public:
 	//--------------------------------------------------------------------------------------------------------------------------
 
 		/**
-		*	@brief Search for books in the system
-		*/
-		void searchBook ();
-
-		/**
 		*	@brief See the book borrowed by the student
 		*	@param Name of the book
 		*	@return Name of the book founded on system
@@ -77,6 +72,10 @@ public:
 		*/
 		void check ( Book* );
 
+		/**
+		*	@brief Search for books in the system
+		*/
+		void searchBook ();
 
 
 	//--------------------------------------------------------------------------------------------------------------------------
