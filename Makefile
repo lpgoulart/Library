@@ -1,6 +1,6 @@
 CC = g++
 CPPFLAGS = -W -Wall -O0 -pedantic -std=c++11
-CPPOBJCS = src/main.o src/student.o src/book.o src/control.o
+CPPOBJCS = app/main.o src/student.o src/book.o src/control.o
 PROG = bin/library
 TXT = txt/students.txt txt/books.txt
 
@@ -15,8 +15,8 @@ text:
 $(PROG): $(CPPOBJCS)
 	$(CC) $(CPPOBJCS) -o $(PROG)
 
-main.o: src/main.cpp
-	$(CC) $(CPPFLAGS) -c src/main.cpp
+main.o: app/main.cpp
+	$(CC) $(CPPFLAGS) -c app/main.cpp
 
 student.o: src/student.cpp
 	$(CC) $(CPPFLAGS) -c src/student.cpp

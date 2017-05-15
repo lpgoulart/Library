@@ -45,12 +45,78 @@ This code simulate a simple library system toten that make loans, devolutions, b
 
 
 \begin{DoxyItemize}
-\item The Super\+User access password if \char`\"{}1234\char`\"{}
+\item The Super\+User access password is \char`\"{}1234\char`\"{}
 \end{DoxyItemize}
 
-\subsection*{Relatorio}
+\subsection*{Report}
 
 
 \begin{DoxyItemize}
-\item Search for book by tittle\+: \hyperlink{book_8cpp}{src/book.\+cpp}\+: 
+\item Search
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+: In member function ‘void \hyperlink{classControl_a8b6c2e30e71b54786b3ec01e8524076f}{Control\+::search\+Book()}\textquotesingle{}
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+:36\+: Search for book by tittle
+\item Loan
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+: In member function\+: \textquotesingle{}std\+::string \hyperlink{classControl_a7719518366f488614467555e53a6d0c2}{Control\+::search\+Book} ( std\+::string bookT, std\+::string ID )\textquotesingle{}
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+:108\+: Make a loan
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+: In member function\+: \textquotesingle{}void \hyperlink{classControl_ad413782c762539562d2ff9401a54eab3}{Control\+::\+Loans} ()\textquotesingle{}
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+:217\+: Make a loan
+\item Late loan
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+: In member function\+: \textquotesingle{}void \hyperlink{classControl_a234ad2973e4ad1e4cb9099f75dbdb05f}{Control\+::check( Book$\ast$ book )}\textquotesingle{}
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+:411\+: Check if is there any late loan in the system
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+: In member function\+: \textquotesingle{}void \hyperlink{classControl_a94a103e37a13e4bbf4ca7c4a979306bf}{Control\+::late\+Book()}\textquotesingle{}
+
+\hyperlink{control_8cpp}{src/control.\+cpp}\+:452\+: Check if is there any late loan in the system
+\item Insertion of Students
+
+Directly in the files $\ast$.txt, follow the instructions below\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+1 > 1                 ( ID ) 
+2 > Leonardo Goulart  ( Student's name )
+3 > Manaus, Amazonas  ( Student's adress )
+4 >                   ( Book borrowed by the student )
+5 ...
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Insertion of Books
+
+Directly in the file $\ast$.txt, follow the instructions below\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}
+1 > O nome do vento   ( Book tittle )
+2 >                   ( ID of student who borrow the book )
+3 > Available         ( Availability )
+4 > Patrick Ruthfuss  ( Author's name )
+5 > The archer        ( Editor's name )
+6 > 2011              ( Year of publication )
+7 >                   ( Loan date )
+8 ... 
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Usage of Memory allocation
+
+Getters \&\& Setters from\+:
+
+\hyperlink{book_8cpp}{src/book.\+cpp}
+
+\hyperlink{student_8cpp}{src/student.\+cpp} 
 \end{DoxyItemize}

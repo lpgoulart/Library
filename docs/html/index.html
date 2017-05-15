@@ -98,11 +98,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>To run, just go bin directory by typing:</li>
 </ul>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;$ cd bin</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;./Library</div></div><!-- fragment --><ul>
-<li>The SuperUser access password if "1234"</li>
+<li>The SuperUser access password is "1234"</li>
 </ul>
-<h2>Relatorio</h2>
+<h2>Report</h2>
 <ul>
-<li>Search for book by tittle: <a class="el" href="book_8cpp.html">src/book.cpp</a>: </li>
+<li><p class="startli">Search</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>: In member function ‘void <a class="el" href="classControl.html#a8b6c2e30e71b54786b3ec01e8524076f" title="Search for books in the system. ">Control::searchBook()</a>'</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>:36: Search for book by tittle</p>
+</li>
+<li><p class="startli">Loan</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>: In member function: 'std::string <a class="el" href="classControl.html#a7719518366f488614467555e53a6d0c2" title="See the book borrowed by the student. ">Control::searchBook</a> ( std::string bookT, std::string ID )'</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>:108: Make a loan</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>: In member function: 'void <a class="el" href="classControl.html#ad413782c762539562d2ff9401a54eab3" title="See the student loan. ">Control::Loans</a> ()'</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>:217: Make a loan</p>
+</li>
+<li><p class="startli">Late loan</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>: In member function: 'void <a class="el" href="classControl.html#a234ad2973e4ad1e4cb9099f75dbdb05f" title="Check if the loan date has passed. ">Control::check( Book* book )</a>'</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>:411: Check if is there any late loan in the system</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>: In member function: 'void <a class="el" href="classControl.html#a94a103e37a13e4bbf4ca7c4a979306bf" title="See wich book is late for devolution. ">Control::lateBook()</a>'</p>
+<p class="startli"><a class="el" href="control_8cpp.html">src/control.cpp</a>:452: Check if is there any late loan in the system</p>
+</li>
+<li><p class="startli">Insertion of Students</p>
+<p class="startli">Directly in the files *.txt, follow the instructions below:</p>
+</li>
+</ul>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&gt; 1                 ( ID ) </div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&gt; Leonardo Goulart  ( Student&#39;s name )</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;&gt; Manaus, Amazonas  ( Student&#39;s adress )</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&gt;                   ( Book borrowed by the student )</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;...</div></div><!-- fragment --><ul>
+<li><p class="startli">Insertion of Books</p>
+<p class="startli">Directly in the file *.txt, follow the instructions below:</p>
+</li>
+</ul>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&gt; O nome do vento   ( Book tittle )</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&gt;                   ( ID of student who borrow the book )</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;&gt; Available         ( Availability )</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;&gt; Patrick Ruthfuss  ( Author&#39;s name )</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;&gt; The archer        ( Editor&#39;s name )</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;&gt; 2011              ( Year of publication )</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;&gt;                   ( Loan date )</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;... </div></div><!-- fragment --><ul>
+<li><p class="startli">Usage of Memory allocation</p>
+<p class="startli">Getters &amp;&amp; Setters from:</p>
+<p class="startli"><a class="el" href="book_8cpp.html">src/book.cpp</a></p>
+<p class="startli"><a class="el" href="student_8cpp.html">src/student.cpp</a> </p>
+</li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
