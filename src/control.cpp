@@ -264,7 +264,7 @@
 				
 				if( book.getTitle() != "" ) {
 					std::cout << "\nBook borrowed by the student: ";
-					std::cout << book.getTitle() << std::endl;
+					std::cout << book.getTitle() << "\n\n";
 				} 
 				else {
 					std::cout << "\nBorrow book: ";
@@ -443,7 +443,7 @@
 
 		loan = loan;
 
-		if ( book->getDate() < loan ) {
+		if ( book->operator < (  loan ) ) {
 			std::cout << "Student: " << student.Search( book->getStudent() ) << std::endl;
 			std::cout << "Book: " << book->getTitle() << std::endl;
 			std::cout << "\nLATE\n\n";

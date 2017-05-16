@@ -42,7 +42,9 @@ std\+::string \hyperlink{classBook_a41d272a411cef781cbd44cb7eca9ac60}{get\+Avail
 void \hyperlink{classBook_a2214e9b5fc10c125d8043b1dc50277f4}{List} ()
 \begin{DoxyCompactList}\small\item\em List all the books in the library. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{classBook_a70e045711b346124d81f16210a67277a}{Check} (std\+::string)
-\begin{DoxyCompactList}\small\item\em Check if the book is in collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if the book is in collection. \end{DoxyCompactList}\item 
+bool \hyperlink{classBook_a19dd030c3c0cbc1b9f04321165825e05}{operator$<$} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Operator overload. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -236,6 +238,25 @@ the year
 
 List all the books in the library. 
 
+\index{Book@{Book}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Book@{Book}}
+\subsubsection[{\texorpdfstring{operator$<$(std\+::string)}{operator<(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Book\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{loan}
+\end{DoxyParamCaption}
+)}\hypertarget{classBook_a19dd030c3c0cbc1b9f04321165825e05}{}\label{classBook_a19dd030c3c0cbc1b9f04321165825e05}
+
+
+Operator overload. 
+
+\begin{DoxyReturn}{Returns}
+True or False 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em date} & of loan \\
+\hline
+\end{DoxyParams}
 \index{Book@{Book}!set\+Author@{set\+Author}}
 \index{set\+Author@{set\+Author}!Book@{Book}}
 \subsubsection[{\texorpdfstring{set\+Author(std\+::string)}{setAuthor(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Book\+::set\+Author (

@@ -62,6 +62,21 @@ This code simulate a simple library system toten that make loans, devolutions, b
 	
 	src/control.cpp:452: Check if is there any late loan in the system
 
+*	Usage of Memory allocation
+
+	Getters && Setters from:
+
+	src/book.cpp
+
+	src/student.cpp
+
+*	Usage of operator overload "<"
+
+	src/control.cpp: In member function: 'void Control::check( Book* book )'
+	
+	src/control.cpp:446: Check if is there any late loan in the system
+
+
 *	Insertion of Students
 	
 	Directly in the files *.txt, follow the instructions below:
@@ -93,10 +108,3 @@ This code simulate a simple library system toten that make loans, devolutions, b
 
 ```
 
-*	Usage of Memory allocation
-
-	Getters && Setters from:
-
-	src/book.cpp
-
-	src/student.cpp
